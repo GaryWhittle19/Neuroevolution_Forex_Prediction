@@ -3,36 +3,40 @@ import data                             # Read and clean .csv data
 import net                              # Create and modify Echo State Networks
 import optimize                         # Echo-State Network hyperparameter optimization
 import plot                             # Plot data
+import parameters                       # User controlled parameters
 # Externals
 import copy                             # For making copies of data
 import numpy as np                      # Numbers processing
 import pandas as pd                     # Multi-dimensional arrays (DataFrame)
 
-# Training and prediction
-training_window_size = 0                                        # Size of training window to use for Echo State Networks
-prediction_window = 5                                           # How many days in single prediction
+# Training and prediction windows
+training_window_size = 0
+prediction_window = parameters.prediction_window
+
 # Window optimization
-n_optimizer_predictions = 50                                    # Num of predictions to make during window optimization
-smallest_possible_training_window = 200                         # Smallest training window test in optimization
-largest_possible_training_window = 250                          # Largest training window test in optimization
-training_window_test_increase = 1                               # The number to increase by between window tests
-# .csv
+n_optimizer_predictions = parameters.n_optimizer_predictions
+smallest_possible_training_window = parameters.smallest_possible_training_window
+largest_possible_training_window = parameters.largest_possible_training_window
+training_window_test_increase = parameters.training_window_test_increase
+
+# Data
 entries_required = (prediction_window * n_optimizer_predictions) \
                    + largest_possible_training_window           # Number of recent entries required from .csv
-# Data
 target_data = data.return_univariate('eu.csv',
                                      entries_required,
                                      ['open'])                  # Target data - data to train and test on
 prices = 0                                                      # Stores prices to predict - set during execution
+
 # Network
-n_reservoir = 100                                               # Size of Echo State Network (ESN) hidden state
-spectral_radius = 1.50                                          # Spectral radius to use for weights in ESNs
-sparsity = 0.20                                                 # Sparsity to use for weights in ESNs
-noise = 0.02                                                    # Noise to use for training of ESN
-input_scaling = 0.96                                            # Scale ESN input to hidden weights using this value
+n_reservoir = parameters.n_reservoir                            # Size of Echo State Network (ESN) hidden state
+spectral_radius = parameters.spectral_radius                    # Spectral radius to use for weights in ESNs
+sparsity = parameters.sparsity                                  # Sparsity to use for weights in ESNs
+noise = parameters.sparsity                                     # Noise to use for training of ESN
+input_scaling = parameters.input_scaling                        # Scale ESN input to hidden weights using this value
+
 # Neuroevolution
 n_neuroevolution_predictions = 1                                # Num of predictions to make during each generation
-n_generations = 20000                                           # Number of generations to run genetic algorithm for
+n_generations = parameters.n_generations                        # Number of generations to run genetic algorithm for
 n_predicted_days = prediction_window \
                    * n_neuroevolution_predictions               # How many total predicted days in each generation
 
@@ -95,7 +99,7 @@ def run(iteration):
 
         # Perform mutation on feedback weights
         backup_weights = copy.deepcopy(weights)
-        weights = net.mutate_weights(weights, 0.25)
+        weights = net.mutate_weights(weights, parameters.mutation_rate)
         esn.W_out = copy.deepcopy(weights)
 
         # Calculate mean-squared error of non-evolved prediction
@@ -129,7 +133,7 @@ def run(iteration):
     # Plot predictions from training
     plot.plot_predictions(predictions_df, target_data,
                           training_window_size + n_predicted_days, n_predicted_days,
-                          'Training Predictions (' + str(iteration + 1) + ').html')
+                          'Training Predictions (' + str(iteration + 1) + ').html', parameters.html_auto_show)
 
     # TEST EVOLVED ECHO-STATE NETWORK ON NEW TARGET DATA // --------------------------------------------------------- //
     # Create DataFrame for prediction tests
@@ -170,7 +174,7 @@ def run(iteration):
     current_iteration = iteration + 1
     plot.plot_test_predictions(non_evolved_test_predictions_df, evolved_test_predictions_df, target_data,
                                training_window_size + n_predicted_days, n_predicted_days,
-                               'Testing Predictions (' + str(current_iteration) + ').html')
+                               'Testing Predictions (' + str(current_iteration) + ').html', parameters.html_auto_show)
     return
 
 
@@ -186,7 +190,7 @@ def write_ohlc_html(n_target_entries, n_training_data):
                                              ['open', 'high', 'low', 'close', 'volume'],
                                              ['open', 'high', 'low', 'close'])
     ohlc_to_plot = raw_ohlc_data.iloc[:n_training_data]
-    plot.plot_ohlc(ohlc_to_plot, 'Date', 'Price', 'EUR-USD', 'OHLC.html')
+    plot.plot_ohlc(ohlc_to_plot, 'Date', 'Price', 'EUR-USD', 'OHLC.html', parameters.html_auto_show)
 
 
 def get_best_training_window(prediction_window_to_optimize: int, n_predictions: int, esn: object,
@@ -212,6 +216,6 @@ def get_best_training_window(prediction_window_to_optimize: int, n_predictions: 
     return training_window_best
 
 
-# Call main to run program
-for i in range(0, 100, 1):
+for i in range(1, 101, 1):
+    print ("\nIteration: " + str(i) + " running.\n")
     run(i)

@@ -9,7 +9,7 @@
 5. Install pip in the environment                                                     'conda install pip'
 6. Install pandas, numpy, plotly, and cufflinks in the environment using pip          'pip install numpy pandas plotly cufflinks'
 7. Change directory to the one containing source files                                'cd [path to source code]'
-8. Execute main.py to run program. Edit main.py to control program parameters         'python main.py'
+8. Execute main.py to run program. Edit parameters.py to control program parameters         'python main.py'
 
 #### Steps 3-8 (video):
 

@@ -1,5 +1,6 @@
 # Internals
 import plot             # Plot data
+import parameters       # User controlled parameters
 # Externals
 import numpy as np      # Numbers processing
 import pandas as pd     # Multi-dimensional arrays (DataFrame)
@@ -52,5 +53,5 @@ def optimize_training_window_(window_increase_, training_field_start, training_f
         training_df = iteration_df
 
     plot.plot_window_optimization(training_df, 'window', 'mse', 'Training window',
-                                  'MSE', 'Window optimization', 'optimal_window.html')
+                                  'MSE', 'Window optimization', 'optimal_window.html', parameters.html_auto_show)
     return best_training, best_mse
