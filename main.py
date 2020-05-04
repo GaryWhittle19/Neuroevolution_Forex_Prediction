@@ -40,6 +40,11 @@ crossover_rate = parameters.crossover_rate                      # Rate at which 
 n_fitness_predictions = parameters.n_fitness_predictions        # Number of predictions to test fitness upon
 # Amount of tests per network after neuroevolution
 n_test_predictions = parameters.n_test_predictions
+# Initialize the variables for determining effectiveness
+evolved_worse_count = 0
+evolved_better_count = 0
+total_non_evolved_average_mses = []
+total_evolved_average_mses = []
 
 
 def run(iteration):
@@ -101,7 +106,7 @@ def run(iteration):
     population_of_esns = [net.copy_neural_network(esn)] * n_population  # Create initial population
 
     # Create the extreme lists to hold extreme prediction values - used for y-range calculations during plotting
-    training_prediction_extremes = [99.0, -99.0]
+    training_prediction_extremes = [min(prediction)[0], max(prediction)[0]]
 
     # Perform neuroevolution
     for generation in range(0, n_generations, 1):
@@ -260,31 +265,33 @@ def get_best_training_window(prediction_window_to_optimize: int, n_predictions: 
     return training_window_best
 
 
-def update_results(evolved_worse_count, evolved_better_count):
+def update_results(non_evolved_mse_list, evolved_mse_list):
+    """Update the results which will be used in final bar chart plotting and printing of test results.
+    :rtype: none
+    :param non_evolved_mse_list:
+    :param evolved_mse_list:
+    :return: none
     """
-    :rtype: int
-    :param evolved_worse_count: number of times the non-evolved network has been more efficient so far
-    :param evolved_better_count: number of times the evolved network has been more efficient so far
-    :return: updated results
-    """
-    if all(v == 0 for v in evolved_mses):  # If no evolution, less effective
+    global evolved_worse_count
+    global evolved_better_count
+    if all(v == 0 for v in evolved_mse_list):  # If no evolution, less effective
         evolved_worse_count += 1
+        total_non_evolved_average_mses.append(np.average(non_evolved_mses))
         print("\nITERATION " + str(i) + " SHOWED INEFFECTIVE NEUROEVOLUTION.\n")
     else:  # If there was an evolution
-        if np.average(evolved_mses) >= np.average(non_evolved_mses):  # If evolved ESN performed worse
+        if np.average(evolved_mse_list) >= np.average(non_evolved_mse_list):  # If evolved ESN performed worse
             evolved_worse_count += 1  # Increment ineffective count
+            total_non_evolved_average_mses.append(np.average(non_evolved_mses))
             print("\nITERATION " + str(i) + " SHOWED INEFFECTIVE NEUROEVOLUTION.\n")
         else:  # If evolved ESN performed better
             evolved_better_count += 1  # Increment effective count
+            total_evolved_average_mses.append(np.average(evolved_mses))
             print("\nITERATION " + str(i) + " SHOWED EFFECTIVE NEUROEVOLUTION.\n")
-    return evolved_worse_count, evolved_better_count
 
 
-def plot_results(evolved_worse_count, evolved_better_count):
-    """
+def plot_results():
+    """Plot the final results bar chart comparing effectiveness of networks before/after neuroevolution
     :rtype: none
-    :param evolved_worse_count: number of times the non-evolved network has been more efficient so far
-    :param evolved_better_count: number of times the evolved network has been more efficient so far
     :return: none
     """
     plot.plot_results_(evolved_worse_count, evolved_better_count,  # Plot results for analysis
@@ -308,9 +315,7 @@ print("Neuroevolution for Foreign Exchange Prediction Evaluation System.\n\n"
       "Number of fitness calculation predictions: ", n_fitness_predictions, "\n",
       "Number of optimizer predictions: ", n_optimizer_predictions, "\n",
       "Number of test predictions per final network: ", n_test_predictions, "\n\n")
-# Initialize the variables for determining effectiveness
-n_evolved_worse = 0
-n_evolved_better = 0
+
 # Cycle through the iterations to train and test fitted/evolved Echo State Networks
 for i in range(1, n_iterations + 1, 1):
     # Print current iteration
@@ -318,6 +323,14 @@ for i in range(1, n_iterations + 1, 1):
     # Run program and return mse values for networks before/after neuroevolution
     non_evolved_mses, evolved_mses = run(i)
     # Update the test results
-    n_evolved_less_effective, n_evolved_more_effective = update_results(n_evolved_worse, n_evolved_better)
+    update_results(non_evolved_mses, evolved_mses)
+
 # Plot the test results
-plot_results(n_evolved_less_effective, n_evolved_more_effective)
+plot_results()
+# Calculate and print the final test results
+final_non_evolved_average_mse = np.average(total_non_evolved_average_mses)
+final_evolved_average_mse = np.average(total_evolved_average_mses)
+print(" Unsuccessful neuroevolution attempts: ", evolved_worse_count, "\n",
+      "Successful neuroevolution attempts: ", evolved_better_count, "\n",
+      "Average standard network MSE: ", final_non_evolved_average_mse, "\n",
+      "Average neuroevolved network MSE: ", final_evolved_average_mse)

@@ -1,0 +1,3769 @@
+Neuroevolution for Foreign Exchange Prediction Evaluation System.
+
+ Target:  7  day(s).
+ Hidden units:  200 
+ Spectral radius:  1.5 
+ Sparsity:  0.2 
+ Noise:  0.03 
+ Input scaling:  1.0 
+
+ Generations:  10 
+ Population size:  100 
+ Mutation rate:  0.5 
+ Crossover rate:  0.25 
+
+ Number of fitness calculation predictions:  100 
+ Number of optimizer predictions:  100 
+ Number of test predictions per final network:  10 
+
+
+
+Iteration: 1 running.
+
+Testing  25  training window length.
+Best MSE/training so far:  0.010652169798598362 / 25 
+
+Testing  50  training window length.
+Testing  75  training window length.
+Best MSE/training so far:  0.01053950266685927 / 75 
+
+Testing  100  training window length.
+Best MSE/training so far:  0.010181718742927504 / 100 
+
+Testing  125  training window length.
+Testing  150  training window length.
+Testing  175  training window length.
+Testing  200  training window length.
+Testing  225  training window length.
+Testing  250  training window length.
+Testing  275  training window length.
+Testing  300  training window length.
+Best MSE/training so far:  0.009765814657643777 / 300 
+
+Testing  325  training window length.
+Best MSE/training so far:  0.00898292258523592 / 325 
+
+Testing  350  training window length.
+Best MSE/training so far:  0.008872667370061284 / 350 
+
+Testing  375  training window length.
+Best MSE/training so far:  0.008664625096546119 / 375 
+
+Testing  400  training window length.
+Best MSE/training so far:  0.008360319337135918 / 400 
+
+Testing  425  training window length.
+Best MSE/training so far:  0.007674385676147171 / 425 
+
+Testing  450  training window length.
+Best MSE/training so far:  0.007541777307604798 / 450 
+
+Testing  475  training window length.
+Testing  500  training window length.
+Best MSE/training so far:  0.007523915536167708 / 500 
+
+Testing  525  training window length.
+Best MSE/training so far:  0.007318831160254454 / 525 
+
+Testing  550  training window length.
+Best MSE/training so far:  0.00682392383085759 / 550 
+
+Testing  575  training window length.
+Testing  600  training window length.
+Testing  625  training window length.
+Testing  650  training window length.
+Best MSE/training so far:  0.005749515465426918 / 650 
+
+Testing  675  training window length.
+Best MSE/training so far:  0.0050161775701442445 / 675 
+
+Testing  700  training window length.
+Best MSE/training so far:  0.004676930564766302 / 700 
+
+Testing  725  training window length.
+Best MSE/training so far:  0.00396129260988754 / 725 
+
+Testing  750  training window length.
+Best MSE/training so far:  0.0036556390051503095 / 750 
+
+Testing  775  training window length.
+Best MSE/training so far:  0.0036081204641204906 / 775 
+
+Testing  800  training window length.
+Best MSE/training so far:  0.0033907965176360752 / 800 
+
+Testing  825  training window length.
+Testing  850  training window length.
+Testing  875  training window length.
+Testing  900  training window length.
+Testing  925  training window length.
+Testing  950  training window length.
+Testing  975  training window length.
+Testing  1000  training window length.
+Testing  1025  training window length.
+Testing  1050  training window length.
+Testing  1075  training window length.
+Testing  1100  training window length.
+Testing  1125  training window length.
+Testing  1150  training window length.
+Testing  1175  training window length.
+Testing  1200  training window length.
+Testing  1225  training window length.
+Testing  1250  training window length.
+Testing  1275  training window length.
+Testing  1300  training window length.
+Testing  1325  training window length.
+Testing  1350  training window length.
+Testing  1375  training window length.
+Testing  1400  training window length.
+Testing  1425  training window length.
+Testing  1450  training window length.
+Testing  1475  training window length.
+Testing  1500  training window length.
+Testing  1525  training window length.
+Testing  1550  training window length.
+Testing  1575  training window length.
+Best MSE/training so far:  0.0031300368755876736 / 1575 
+
+Testing  1600  training window length.
+Best MSE/training so far:  0.0023004939531224805 / 1600 
+
+Testing  1625  training window length.
+Testing  1650  training window length.
+Testing  1675  training window length.
+Testing  1700  training window length.
+Testing  1725  training window length.
+Testing  1750  training window length.
+Testing  1775  training window length.
+Testing  1800  training window length.
+Testing  1825  training window length.
+Testing  1850  training window length.
+Testing  1875  training window length.
+Testing  1900  training window length.
+Testing  1925  training window length.
+Testing  1950  training window length.
+Testing  1975  training window length.
+Testing  2000  training window length.
+Testing  2025  training window length.
+Optimal training window:  1600 
+ Mean squared error:  0.0023004939531224805 
+
+Initial MSE before evolution:  0.0002644252728546061 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  32 
+MSE:  0.00010474714907474257 
+MSE before/after:  0.0002644252728546061 / 0.00010474714907474257 
+MSE difference:  -0.00015967812377986351
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  4 
+MSE:  0.00010455971234750694 
+MSE before/after:  0.00010474714907474257 / 0.00010455971234750694 
+MSE difference:  -1.8743672723563697e-07
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  82 
+MSE:  0.00010386767461468263 
+MSE before/after:  0.00010455971234750694 / 0.00010386767461468263 
+MSE difference:  -6.920377328243108e-07
+Generation:  9
+
+ITERATION 1 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 2 running.
+
+Initial MSE before evolution:  0.00032412936962869813 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  97 
+MSE:  0.00023988363511814415 
+MSE before/after:  0.00032412936962869813 / 0.00023988363511814415 
+MSE difference:  -8.424573451055399e-05
+Generation:  1
+
+Best generation:  1 
+Best member:  48 
+MSE:  0.00011192174378658836 
+MSE before/after:  0.00023988363511814415 / 0.00011192174378658836 
+MSE difference:  -0.00012796189133155577
+Generation:  2
+
+Best generation:  2 
+Best member:  6 
+MSE:  6.58620149083524e-05 
+MSE before/after:  0.00011192174378658836 / 6.58620149083524e-05 
+MSE difference:  -4.6059728878235966e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  15 
+MSE:  6.480658875508401e-05 
+MSE before/after:  6.58620149083524e-05 / 6.480658875508401e-05 
+MSE difference:  -1.0554261532683904e-06
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 2 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 3 running.
+
+Initial MSE before evolution:  0.0005938113192598446 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.0002860717829443058 
+MSE before/after:  0.0005938113192598446 / 0.0002860717829443058 
+MSE difference:  -0.00030773953631553876
+Generation:  2
+
+Best generation:  2 
+Best member:  18 
+MSE:  0.0001695987970576737 
+MSE before/after:  0.0002860717829443058 / 0.0001695987970576737 
+MSE difference:  -0.00011647298588663208
+Generation:  3
+
+Best generation:  3 
+Best member:  21 
+MSE:  0.0001678312279980132 
+MSE before/after:  0.0001695987970576737 / 0.0001678312279980132 
+MSE difference:  -1.7675690596605166e-06
+Generation:  4
+
+Best generation:  4 
+Best member:  16 
+MSE:  0.00016465025727806869 
+MSE before/after:  0.0001678312279980132 / 0.00016465025727806869 
+MSE difference:  -3.1809707199445102e-06
+Generation:  5
+
+Best generation:  5 
+Best member:  23 
+MSE:  0.00016135385402703807 
+MSE before/after:  0.00016465025727806869 / 0.00016135385402703807 
+MSE difference:  -3.2964032510306206e-06
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  10 
+MSE:  0.00014964541910432032 
+MSE before/after:  0.00016135385402703807 / 0.00014964541910432032 
+MSE difference:  -1.1708434922717744e-05
+Generation:  8
+Generation:  9
+
+ITERATION 3 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 4 running.
+
+Initial MSE before evolution:  0.00016565461763025607 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  52 
+MSE:  8.88923197780703e-05 
+MSE before/after:  0.00016565461763025607 / 8.88923197780703e-05 
+MSE difference:  -7.676229785218577e-05
+Generation:  1
+
+Best generation:  1 
+Best member:  12 
+MSE:  8.365768804774775e-05 
+MSE before/after:  8.88923197780703e-05 / 8.365768804774775e-05 
+MSE difference:  -5.234631730322551e-06
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  47 
+MSE:  7.235003113543952e-05 
+MSE before/after:  8.365768804774775e-05 / 7.235003113543952e-05 
+MSE difference:  -1.1307656912308233e-05
+
+ITERATION 4 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 5 running.
+
+Initial MSE before evolution:  0.00017802128018687137 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  22 
+MSE:  0.00016312465655095456 
+MSE before/after:  0.00017802128018687137 / 0.00016312465655095456 
+MSE difference:  -1.4896623635916807e-05
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  15 
+MSE:  0.00016306718034766795 
+MSE before/after:  0.00016312465655095456 / 0.00016306718034766795 
+MSE difference:  -5.747620328660466e-08
+
+ITERATION 5 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 6 running.
+
+Initial MSE before evolution:  0.00026699630876949806 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.00011299519434608459 
+MSE before/after:  0.00026699630876949806 / 0.00011299519434608459 
+MSE difference:  -0.00015400111442341347
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 6 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 7 running.
+
+Initial MSE before evolution:  0.0002695569505156935 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  22 
+MSE:  0.00014737828293010606 
+MSE before/after:  0.0002695569505156935 / 0.00014737828293010606 
+MSE difference:  -0.00012217866758558745
+Generation:  2
+
+Best generation:  2 
+Best member:  5 
+MSE:  0.00012318238115927222 
+MSE before/after:  0.00014737828293010606 / 0.00012318238115927222 
+MSE difference:  -2.4195901770833835e-05
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  2 
+MSE:  9.424271350215422e-05 
+MSE before/after:  0.00012318238115927222 / 9.424271350215422e-05 
+MSE difference:  -2.8939667657118003e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  2 
+MSE:  9.384649330320918e-05 
+MSE before/after:  9.424271350215422e-05 / 9.384649330320918e-05 
+MSE difference:  -3.9622019894504346e-07
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 7 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 8 running.
+
+Initial MSE before evolution:  0.0005053251642417639 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.0002479000116521217 
+MSE before/after:  0.0005053251642417639 / 0.0002479000116521217 
+MSE difference:  -0.0002574251525896422
+Generation:  2
+
+Best generation:  2 
+Best member:  12 
+MSE:  0.00023894988784984163 
+MSE before/after:  0.0002479000116521217 / 0.00023894988784984163 
+MSE difference:  -8.950123802280087e-06
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  16 
+MSE:  0.00019652109785623192 
+MSE before/after:  0.00023894988784984163 / 0.00019652109785623192 
+MSE difference:  -4.242878999360971e-05
+Generation:  5
+
+Best generation:  5 
+Best member:  20 
+MSE:  0.00016888630915980614 
+MSE before/after:  0.00019652109785623192 / 0.00016888630915980614 
+MSE difference:  -2.7634788696425782e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  6 
+MSE:  0.00015812189337407028 
+MSE before/after:  0.00016888630915980614 / 0.00015812189337407028 
+MSE difference:  -1.0764415785735859e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 8 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 9 running.
+
+Initial MSE before evolution:  0.00027630345572935355 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  10 
+MSE:  0.00015894583334901432 
+MSE before/after:  0.00027630345572935355 / 0.00015894583334901432 
+MSE difference:  -0.00011735762238033922
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  17 
+MSE:  0.00014185605018905332 
+MSE before/after:  0.00015894583334901432 / 0.00014185605018905332 
+MSE difference:  -1.7089783159961007e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 9 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 10 running.
+
+Initial MSE before evolution:  0.00028973132125512493 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  22 
+MSE:  0.00018972810811450236 
+MSE before/after:  0.00028973132125512493 / 0.00018972810811450236 
+MSE difference:  -0.00010000321314062257
+Generation:  2
+
+Best generation:  2 
+Best member:  22 
+MSE:  0.00017381210550042225 
+MSE before/after:  0.00018972810811450236 / 0.00017381210550042225 
+MSE difference:  -1.591600261408011e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  20 
+MSE:  0.0001549291738713247 
+MSE before/after:  0.00017381210550042225 / 0.0001549291738713247 
+MSE difference:  -1.8882931629097557e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  12 
+MSE:  0.00014090339331252207 
+MSE before/after:  0.0001549291738713247 / 0.00014090339331252207 
+MSE difference:  -1.4025780558802627e-05
+Generation:  8
+Generation:  9
+
+ITERATION 10 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 11 running.
+
+Initial MSE before evolution:  0.0002956866948853385 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  20 
+MSE:  0.00018763754084391557 
+MSE before/after:  0.0002956866948853385 / 0.00018763754084391557 
+MSE difference:  -0.00010804915404142291
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 11 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 12 running.
+
+Initial MSE before evolution:  0.00028713725900116397 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  7 
+MSE:  0.0001503364899426773 
+MSE before/after:  0.00028713725900116397 / 0.0001503364899426773 
+MSE difference:  -0.00013680076905848667
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  16 
+MSE:  0.0001368750155969486 
+MSE before/after:  0.0001503364899426773 / 0.0001368750155969486 
+MSE difference:  -1.3461474345728697e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 12 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 13 running.
+
+Initial MSE before evolution:  0.0008609653558462886 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  94 
+MSE:  0.0005100451791875721 
+MSE before/after:  0.0008609653558462886 / 0.0005100451791875721 
+MSE difference:  -0.0003509201766587165
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  12 
+MSE:  0.0003479369428636065 
+MSE before/after:  0.0005100451791875721 / 0.0003479369428636065 
+MSE difference:  -0.0001621082363239656
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  16 
+MSE:  0.0003349202384741586 
+MSE before/after:  0.0003479369428636065 / 0.0003349202384741586 
+MSE difference:  -1.3016704389447892e-05
+Generation:  8
+Generation:  9
+
+ITERATION 13 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 14 running.
+
+Initial MSE before evolution:  0.0006144187181124261 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  23 
+MSE:  0.0002078224736846954 
+MSE before/after:  0.0006144187181124261 / 0.0002078224736846954 
+MSE difference:  -0.0004065962444277307
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  6 
+MSE:  0.00015323746340688402 
+MSE before/after:  0.0002078224736846954 / 0.00015323746340688402 
+MSE difference:  -5.458501027781138e-05
+Generation:  4
+
+Best generation:  4 
+Best member:  8 
+MSE:  0.00012729410380331 
+MSE before/after:  0.00015323746340688402 / 0.00012729410380331 
+MSE difference:  -2.594335960357403e-05
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  15 
+MSE:  0.00012016721622953659 
+MSE before/after:  0.00012729410380331 / 0.00012016721622953659 
+MSE difference:  -7.126887573773402e-06
+Generation:  8
+Generation:  9
+
+ITERATION 14 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 15 running.
+
+Initial MSE before evolution:  0.0004289959599967068 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  15 
+MSE:  0.00013904845763604634 
+MSE before/after:  0.0004289959599967068 / 0.00013904845763604634 
+MSE difference:  -0.0002899475023606605
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  5 
+MSE:  0.0001371328858018166 
+MSE before/after:  0.00013904845763604634 / 0.0001371328858018166 
+MSE difference:  -1.915571834229746e-06
+Generation:  9
+
+ITERATION 15 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 16 running.
+
+Initial MSE before evolution:  0.0007289657384832929 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  29 
+MSE:  0.00029890225777464666 
+MSE before/after:  0.0007289657384832929 / 0.00029890225777464666 
+MSE difference:  -0.00043006348070864623
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  4 
+MSE:  0.0002808071675163241 
+MSE before/after:  0.00029890225777464666 / 0.0002808071675163241 
+MSE difference:  -1.8095090258322553e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  19 
+MSE:  0.00014596314247739063 
+MSE before/after:  0.0002808071675163241 / 0.00014596314247739063 
+MSE difference:  -0.00013484402503893348
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 16 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 17 running.
+
+Initial MSE before evolution:  0.0005097832105462965 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  48 
+MSE:  0.0001319784346241127 
+MSE before/after:  0.0005097832105462965 / 0.0001319784346241127 
+MSE difference:  -0.00037780477592218385
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 17 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 18 running.
+
+Initial MSE before evolution:  0.0002907741664354318 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  5 
+MSE:  0.0001938808610982711 
+MSE before/after:  0.0002907741664354318 / 0.0001938808610982711 
+MSE difference:  -9.689330533716069e-05
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  9 
+MSE:  0.00017821817718161346 
+MSE before/after:  0.0001938808610982711 / 0.00017821817718161346 
+MSE difference:  -1.5662683916657628e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  14 
+MSE:  0.0001739431726437486 
+MSE before/after:  0.00017821817718161346 / 0.0001739431726437486 
+MSE difference:  -4.2750045378648575e-06
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 18 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 19 running.
+
+Initial MSE before evolution:  0.0006451570725726269 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.000417287051093317 
+MSE before/after:  0.0006451570725726269 / 0.000417287051093317 
+MSE difference:  -0.0002278700214793099
+Generation:  2
+
+Best generation:  2 
+Best member:  21 
+MSE:  0.00013158943876296323 
+MSE before/after:  0.000417287051093317 / 0.00013158943876296323 
+MSE difference:  -0.00028569761233035375
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  13 
+MSE:  0.00012845067036036109 
+MSE before/after:  0.00013158943876296323 / 0.00012845067036036109 
+MSE difference:  -3.1387684026021496e-06
+Generation:  7
+
+Best generation:  7 
+Best member:  19 
+MSE:  9.858260232030007e-05 
+MSE before/after:  0.00012845067036036109 / 9.858260232030007e-05 
+MSE difference:  -2.9868068040061018e-05
+Generation:  8
+Generation:  9
+
+ITERATION 19 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 20 running.
+
+Initial MSE before evolution:  0.000679282603278318 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  1 
+MSE:  0.00013859389409886345 
+MSE before/after:  0.000679282603278318 / 0.00013859389409886345 
+MSE difference:  -0.0005406887091794546
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  2 
+MSE:  0.0001375528806907914 
+MSE before/after:  0.00013859389409886345 / 0.0001375528806907914 
+MSE difference:  -1.0410134080720353e-06
+Generation:  7
+
+Best generation:  7 
+Best member:  23 
+MSE:  0.0001235152049413793 
+MSE before/after:  0.0001375528806907914 / 0.0001235152049413793 
+MSE difference:  -1.4037675749412103e-05
+Generation:  8
+Generation:  9
+
+ITERATION 20 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 21 running.
+
+Initial MSE before evolution:  0.00015055146909577515 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  2 
+MSE:  0.00014985562039149106 
+MSE before/after:  0.00015055146909577515 / 0.00014985562039149106 
+MSE difference:  -6.958487042840896e-07
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 21 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 22 running.
+
+Initial MSE before evolution:  0.0006802027742305791 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  4 
+MSE:  0.00020633257153002647 
+MSE before/after:  0.0006802027742305791 / 0.00020633257153002647 
+MSE difference:  -0.0004738702027005527
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  3 
+MSE:  0.0001728964176868881 
+MSE before/after:  0.00020633257153002647 / 0.0001728964176868881 
+MSE difference:  -3.3436153843138366e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 22 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 23 running.
+
+Initial MSE before evolution:  0.0005467234572923708 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  2 
+MSE:  0.000315597900391449 
+MSE before/after:  0.0005467234572923708 / 0.000315597900391449 
+MSE difference:  -0.0002311255569009218
+Generation:  1
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  9 
+MSE:  0.0001553817175839621 
+MSE before/after:  0.000315597900391449 / 0.0001553817175839621 
+MSE difference:  -0.0001602161828074869
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 23 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 24 running.
+
+Initial MSE before evolution:  0.00043280595673218265 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  7 
+MSE:  0.00024898628182712 
+MSE before/after:  0.00043280595673218265 / 0.00024898628182712 
+MSE difference:  -0.00018381967490506266
+Generation:  2
+
+Best generation:  2 
+Best member:  23 
+MSE:  0.00015194196614788614 
+MSE before/after:  0.00024898628182712 / 0.00015194196614788614 
+MSE difference:  -9.704431567923385e-05
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  5 
+MSE:  0.00013859456005984642 
+MSE before/after:  0.00015194196614788614 / 0.00013859456005984642 
+MSE difference:  -1.334740608803972e-05
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 24 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 25 running.
+
+Initial MSE before evolution:  0.00047319507468199294 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  1 
+MSE:  0.00014279939142958868 
+MSE before/after:  0.00047319507468199294 / 0.00014279939142958868 
+MSE difference:  -0.00033039568325240424
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  16 
+MSE:  0.00013786331210303952 
+MSE before/after:  0.00014279939142958868 / 0.00013786331210303952 
+MSE difference:  -4.936079326549163e-06
+Generation:  8
+Generation:  9
+
+ITERATION 25 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 26 running.
+
+Initial MSE before evolution:  0.00043200076871503985 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  2 
+MSE:  0.00011889511631433192 
+MSE before/after:  0.00043200076871503985 / 0.00011889511631433192 
+MSE difference:  -0.00031310565240070794
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  22 
+MSE:  0.00010504665494725032 
+MSE before/after:  0.00011889511631433192 / 0.00010504665494725032 
+MSE difference:  -1.3848461367081604e-05
+Generation:  9
+
+Best generation:  9 
+Best member:  4 
+MSE:  0.00010058940606632042 
+MSE before/after:  0.00010504665494725032 / 0.00010058940606632042 
+MSE difference:  -4.457248880929905e-06
+
+ITERATION 26 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 27 running.
+
+Initial MSE before evolution:  0.0004632629837491156 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  84 
+MSE:  0.0002505133334867947 
+MSE before/after:  0.0004632629837491156 / 0.0002505133334867947 
+MSE difference:  -0.0002127496502623209
+Generation:  1
+
+Best generation:  1 
+Best member:  0 
+MSE:  0.00019912331367435645 
+MSE before/after:  0.0002505133334867947 / 0.00019912331367435645 
+MSE difference:  -5.1390019812438265e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  60 
+MSE:  0.0001716666494590575 
+MSE before/after:  0.00019912331367435645 / 0.0001716666494590575 
+MSE difference:  -2.745666421529895e-05
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 27 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 28 running.
+
+Initial MSE before evolution:  0.00017626247845109867 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  22 
+MSE:  0.00015454404237365065 
+MSE before/after:  0.00017626247845109867 / 0.00015454404237365065 
+MSE difference:  -2.171843607744802e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  18 
+MSE:  0.00014025422593003063 
+MSE before/after:  0.00015454404237365065 / 0.00014025422593003063 
+MSE difference:  -1.4289816443620025e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 28 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 29 running.
+
+Initial MSE before evolution:  0.00017358456170102603 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  15 
+MSE:  0.00016562013261537726 
+MSE before/after:  0.00017358456170102603 / 0.00016562013261537726 
+MSE difference:  -7.964429085648774e-06
+Generation:  4
+
+Best generation:  4 
+Best member:  24 
+MSE:  0.00013647439906645385 
+MSE before/after:  0.00016562013261537726 / 0.00013647439906645385 
+MSE difference:  -2.9145733548923406e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 29 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 30 running.
+
+Initial MSE before evolution:  0.0005043840268991771 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  12 
+MSE:  0.000191702823991813 
+MSE before/after:  0.0005043840268991771 / 0.000191702823991813 
+MSE difference:  -0.00031268120290736407
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 30 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 31 running.
+
+Initial MSE before evolution:  0.0002184915450485846 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  15 
+MSE:  0.00019989939023378454 
+MSE before/after:  0.0002184915450485846 / 0.00019989939023378454 
+MSE difference:  -1.859215481480006e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  7 
+MSE:  0.00018724317425825778 
+MSE before/after:  0.00019989939023378454 / 0.00018724317425825778 
+MSE difference:  -1.2656215975526765e-05
+Generation:  4
+
+Best generation:  4 
+Best member:  14 
+MSE:  0.0001832667423781028 
+MSE before/after:  0.00018724317425825778 / 0.0001832667423781028 
+MSE difference:  -3.976431880154974e-06
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  17 
+MSE:  0.00012572058338049418 
+MSE before/after:  0.0001832667423781028 / 0.00012572058338049418 
+MSE difference:  -5.7546158997608625e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 31 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 32 running.
+
+Initial MSE before evolution:  0.00035383343490336485 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  14 
+MSE:  0.00023277593601305158 
+MSE before/after:  0.00035383343490336485 / 0.00023277593601305158 
+MSE difference:  -0.00012105749889031327
+Generation:  2
+
+Best generation:  2 
+Best member:  19 
+MSE:  0.00017875180363591454 
+MSE before/after:  0.00023277593601305158 / 0.00017875180363591454 
+MSE difference:  -5.402413237713704e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  16 
+MSE:  0.00017398601849019795 
+MSE before/after:  0.00017875180363591454 / 0.00017398601849019795 
+MSE difference:  -4.765785145716589e-06
+Generation:  4
+
+Best generation:  4 
+Best member:  22 
+MSE:  0.0001696522031013591 
+MSE before/after:  0.00017398601849019795 / 0.0001696522031013591 
+MSE difference:  -4.33381538883886e-06
+Generation:  5
+
+Best generation:  5 
+Best member:  14 
+MSE:  0.00014353974579839205 
+MSE before/after:  0.0001696522031013591 / 0.00014353974579839205 
+MSE difference:  -2.6112457302967043e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  12 
+MSE:  0.00013497843855393178 
+MSE before/after:  0.00014353974579839205 / 0.00013497843855393178 
+MSE difference:  -8.561307244460263e-06
+Generation:  7
+
+Best generation:  7 
+Best member:  9 
+MSE:  0.00013464143748449672 
+MSE before/after:  0.00013497843855393178 / 0.00013464143748449672 
+MSE difference:  -3.370010694350614e-07
+Generation:  8
+Generation:  9
+
+ITERATION 32 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 33 running.
+
+Initial MSE before evolution:  0.00018534346912108207 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  18 
+MSE:  0.00017581266840791592 
+MSE before/after:  0.00018534346912108207 / 0.00017581266840791592 
+MSE difference:  -9.530800713166153e-06
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  15 
+MSE:  0.00016518134330072439 
+MSE before/after:  0.00017581266840791592 / 0.00016518134330072439 
+MSE difference:  -1.0631325107191534e-05
+Generation:  9
+
+ITERATION 33 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 34 running.
+
+Initial MSE before evolution:  0.00014148623296953453 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  23 
+MSE:  0.00013007886474706117 
+MSE before/after:  0.00014148623296953453 / 0.00013007886474706117 
+MSE difference:  -1.1407368222473354e-05
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  3 
+MSE:  0.0001274411165539347 
+MSE before/after:  0.00013007886474706117 / 0.0001274411165539347 
+MSE difference:  -2.6377481931264815e-06
+Generation:  5
+
+Best generation:  5 
+Best member:  12 
+MSE:  0.00011776557478993361 
+MSE before/after:  0.0001274411165539347 / 0.00011776557478993361 
+MSE difference:  -9.675541764001084e-06
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 34 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 35 running.
+
+Initial MSE before evolution:  0.0003956052446997987 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  8 
+MSE:  0.000366964293927992 
+MSE before/after:  0.0003956052446997987 / 0.000366964293927992 
+MSE difference:  -2.864095077180674e-05
+Generation:  1
+
+Best generation:  1 
+Best member:  15 
+MSE:  0.00036599355713442193 
+MSE before/after:  0.000366964293927992 / 0.00036599355713442193 
+MSE difference:  -9.707367935700428e-07
+Generation:  2
+
+Best generation:  2 
+Best member:  23 
+MSE:  0.0002520841243352076 
+MSE before/after:  0.00036599355713442193 / 0.0002520841243352076 
+MSE difference:  -0.00011390943279921431
+Generation:  3
+
+Best generation:  3 
+Best member:  3 
+MSE:  0.00016989979481256222 
+MSE before/after:  0.0002520841243352076 / 0.00016989979481256222 
+MSE difference:  -8.21843295226454e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 35 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 36 running.
+
+Initial MSE before evolution:  0.00025616584371271773 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  23 
+MSE:  0.00023045043404633627 
+MSE before/after:  0.00025616584371271773 / 0.00023045043404633627 
+MSE difference:  -2.571540966638146e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  5 
+MSE:  0.00015974993479262232 
+MSE before/after:  0.00023045043404633627 / 0.00015974993479262232 
+MSE difference:  -7.070049925371396e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 36 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 37 running.
+
+Initial MSE before evolution:  0.000352333197578144 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  10 
+MSE:  0.00018217540441720786 
+MSE before/after:  0.000352333197578144 / 0.00018217540441720786 
+MSE difference:  -0.00017015779316093612
+Generation:  2
+
+Best generation:  2 
+Best member:  10 
+MSE:  0.0001563706139278819 
+MSE before/after:  0.00018217540441720786 / 0.0001563706139278819 
+MSE difference:  -2.5804790489325973e-05
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 37 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 38 running.
+
+Initial MSE before evolution:  0.00028683571210701207 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  21 
+MSE:  0.00015322405341030063 
+MSE before/after:  0.00028683571210701207 / 0.00015322405341030063 
+MSE difference:  -0.00013361165869671144
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  18 
+MSE:  0.00015024476773118113 
+MSE before/after:  0.00015322405341030063 / 0.00015024476773118113 
+MSE difference:  -2.979285679119507e-06
+Generation:  7
+
+Best generation:  7 
+Best member:  23 
+MSE:  0.00012518723355839045 
+MSE before/after:  0.00015024476773118113 / 0.00012518723355839045 
+MSE difference:  -2.5057534172790677e-05
+Generation:  8
+Generation:  9
+
+ITERATION 38 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 39 running.
+
+Initial MSE before evolution:  0.0005136061707068355 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  18 
+MSE:  0.00019947672612171904 
+MSE before/after:  0.0005136061707068355 / 0.00019947672612171904 
+MSE difference:  -0.00031412944458511646
+Generation:  2
+
+Best generation:  2 
+Best member:  7 
+MSE:  0.00013189607883749426 
+MSE before/after:  0.00019947672612171904 / 0.00013189607883749426 
+MSE difference:  -6.758064728422478e-05
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 39 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 40 running.
+
+Initial MSE before evolution:  0.00020862255161339715 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.00012763706194218743 
+MSE before/after:  0.00020862255161339715 / 0.00012763706194218743 
+MSE difference:  -8.098548967120972e-05
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  23 
+MSE:  0.0001253542283552407 
+MSE before/after:  0.00012763706194218743 / 0.0001253542283552407 
+MSE difference:  -2.2828335869467457e-06
+Generation:  4
+
+Best generation:  4 
+Best member:  14 
+MSE:  0.00010789404166238496 
+MSE before/after:  0.0001253542283552407 / 0.00010789404166238496 
+MSE difference:  -1.7460186692855727e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 40 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 41 running.
+
+Initial MSE before evolution:  0.00026553051347280067 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  26 
+MSE:  0.0001627934278246488 
+MSE before/after:  0.00026553051347280067 / 0.0001627934278246488 
+MSE difference:  -0.00010273708564815186
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  17 
+MSE:  0.00015464990511544543 
+MSE before/after:  0.0001627934278246488 / 0.00015464990511544543 
+MSE difference:  -8.143522709203374e-06
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  72 
+MSE:  0.00014950554605498115 
+MSE before/after:  0.00015464990511544543 / 0.00014950554605498115 
+MSE difference:  -5.14435906046428e-06
+Generation:  9
+
+ITERATION 41 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 42 running.
+
+Initial MSE before evolution:  0.0003748947120983044 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  11 
+MSE:  0.00020870029718293877 
+MSE before/after:  0.0003748947120983044 / 0.00020870029718293877 
+MSE difference:  -0.00016619441491536562
+Generation:  1
+
+Best generation:  1 
+Best member:  15 
+MSE:  0.00011837652498746045 
+MSE before/after:  0.00020870029718293877 / 0.00011837652498746045 
+MSE difference:  -9.032377219547832e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  5 
+MSE:  0.00011506690015823627 
+MSE before/after:  0.00011837652498746045 / 0.00011506690015823627 
+MSE difference:  -3.3096248292241865e-06
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  1 
+MSE:  0.00010661084823251366 
+MSE before/after:  0.00011506690015823627 / 0.00010661084823251366 
+MSE difference:  -8.456051925722607e-06
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 42 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 43 running.
+
+Initial MSE before evolution:  0.00015036976403947223 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  13 
+MSE:  0.0001284846731176909 
+MSE before/after:  0.00015036976403947223 / 0.0001284846731176909 
+MSE difference:  -2.1885090921781332e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 43 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 44 running.
+
+Initial MSE before evolution:  0.0002912479854556505 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  33 
+MSE:  0.00011394531026663683 
+MSE before/after:  0.0002912479854556505 / 0.00011394531026663683 
+MSE difference:  -0.0001773026751890137
+Generation:  1
+
+Best generation:  1 
+Best member:  16 
+MSE:  0.0001093425834387189 
+MSE before/after:  0.00011394531026663683 / 0.0001093425834387189 
+MSE difference:  -4.602726827917928e-06
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 44 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 45 running.
+
+Initial MSE before evolution:  0.00038081331800683606 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  16 
+MSE:  0.00025285098236606533 
+MSE before/after:  0.00038081331800683606 / 0.00025285098236606533 
+MSE difference:  -0.00012796233564077073
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  8 
+MSE:  0.00020680520440001255 
+MSE before/after:  0.00025285098236606533 / 0.00020680520440001255 
+MSE difference:  -4.604577796605278e-05
+Generation:  4
+
+Best generation:  4 
+Best member:  5 
+MSE:  0.00019721371677152395 
+MSE before/after:  0.00020680520440001255 / 0.00019721371677152395 
+MSE difference:  -9.591487628488597e-06
+Generation:  5
+
+Best generation:  5 
+Best member:  13 
+MSE:  0.00018751169594522795 
+MSE before/after:  0.00019721371677152395 / 0.00018751169594522795 
+MSE difference:  -9.702020826296006e-06
+Generation:  6
+
+Best generation:  6 
+Best member:  15 
+MSE:  0.0001765868932251946 
+MSE before/after:  0.00018751169594522795 / 0.0001765868932251946 
+MSE difference:  -1.092480272003334e-05
+Generation:  7
+
+Best generation:  7 
+Best member:  4 
+MSE:  0.00013417636342848117 
+MSE before/after:  0.0001765868932251946 / 0.00013417636342848117 
+MSE difference:  -4.241052979671344e-05
+Generation:  8
+Generation:  9
+
+ITERATION 45 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 46 running.
+
+Initial MSE before evolution:  0.00022498100434062467 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  24 
+MSE:  0.00013446786541177925 
+MSE before/after:  0.00022498100434062467 / 0.00013446786541177925 
+MSE difference:  -9.051313892884542e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  16 
+MSE:  0.00012921019718107582 
+MSE before/after:  0.00013446786541177925 / 0.00012921019718107582 
+MSE difference:  -5.257668230703431e-06
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  18 
+MSE:  0.00012819078426460698 
+MSE before/after:  0.00012921019718107582 / 0.00012819078426460698 
+MSE difference:  -1.0194129164688376e-06
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  4 
+MSE:  0.00012047017281399403 
+MSE before/after:  0.00012819078426460698 / 0.00012047017281399403 
+MSE difference:  -7.720611450612948e-06
+
+ITERATION 46 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 47 running.
+
+Initial MSE before evolution:  0.000471745828769021 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  77 
+MSE:  0.00017602026864798538 
+MSE before/after:  0.000471745828769021 / 0.00017602026864798538 
+MSE difference:  -0.00029572556012103565
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 47 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 48 running.
+
+Initial MSE before evolution:  0.00013668408695285134 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  17 
+MSE:  0.00013425086745135812 
+MSE before/after:  0.00013668408695285134 / 0.00013425086745135812 
+MSE difference:  -2.4332195014932164e-06
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 48 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 49 running.
+
+Initial MSE before evolution:  0.0006102605684068613 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  67 
+MSE:  0.00038975770041427315 
+MSE before/after:  0.0006102605684068613 / 0.00038975770041427315 
+MSE difference:  -0.0002205028679925882
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.00031898893548476705 
+MSE before/after:  0.00038975770041427315 / 0.00031898893548476705 
+MSE difference:  -7.07687649295061e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  1 
+MSE:  0.00030599696771233827 
+MSE before/after:  0.00031898893548476705 / 0.00030599696771233827 
+MSE difference:  -1.2991967772428776e-05
+Generation:  9
+
+ITERATION 49 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 50 running.
+
+Initial MSE before evolution:  0.00028742507016443205 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  23 
+MSE:  0.00017679106385899327 
+MSE before/after:  0.00028742507016443205 / 0.00017679106385899327 
+MSE difference:  -0.00011063400630543878
+Generation:  2
+
+Best generation:  2 
+Best member:  14 
+MSE:  0.00016600117494743288 
+MSE before/after:  0.00017679106385899327 / 0.00016600117494743288 
+MSE difference:  -1.0789888911560388e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  18 
+MSE:  0.00014088344247062496 
+MSE before/after:  0.00016600117494743288 / 0.00014088344247062496 
+MSE difference:  -2.5117732476807923e-05
+Generation:  4
+
+Best generation:  4 
+Best member:  1 
+MSE:  0.00012125917472023784 
+MSE before/after:  0.00014088344247062496 / 0.00012125917472023784 
+MSE difference:  -1.9624267750387116e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 50 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 51 running.
+
+Initial MSE before evolution:  0.0003783857902289418 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  15 
+MSE:  0.00022510117575569983 
+MSE before/after:  0.0003783857902289418 / 0.00022510117575569983 
+MSE difference:  -0.000153284614473242
+Generation:  2
+
+Best generation:  2 
+Best member:  17 
+MSE:  0.00019332758971500187 
+MSE before/after:  0.00022510117575569983 / 0.00019332758971500187 
+MSE difference:  -3.177358604069795e-05
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  20 
+MSE:  0.00017134166511590017 
+MSE before/after:  0.00019332758971500187 / 0.00017134166511590017 
+MSE difference:  -2.198592459910171e-05
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 51 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 52 running.
+
+Initial MSE before evolution:  0.0005725078323690889 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  86 
+MSE:  0.00010316602249793911 
+MSE before/after:  0.0005725078323690889 / 0.00010316602249793911 
+MSE difference:  -0.0004693418098711498
+Generation:  1
+
+Best generation:  1 
+Best member:  36 
+MSE:  7.909829413711304e-05 
+MSE before/after:  0.00010316602249793911 / 7.909829413711304e-05 
+MSE difference:  -2.4067728360826064e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 52 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 53 running.
+
+Initial MSE before evolution:  0.00037526886607151285 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  43 
+MSE:  0.00018689322548604532 
+MSE before/after:  0.00037526886607151285 / 0.00018689322548604532 
+MSE difference:  -0.00018837564058546752
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  24 
+MSE:  0.00017835662014775217 
+MSE before/after:  0.00018689322548604532 / 0.00017835662014775217 
+MSE difference:  -8.53660533829315e-06
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  18 
+MSE:  0.00014222677206578543 
+MSE before/after:  0.00017835662014775217 / 0.00014222677206578543 
+MSE difference:  -3.612984808196675e-05
+Generation:  8
+Generation:  9
+
+ITERATION 53 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 54 running.
+
+Initial MSE before evolution:  0.00023480734796593687 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  19 
+MSE:  0.00016007381873605397 
+MSE before/after:  0.00023480734796593687 / 0.00016007381873605397 
+MSE difference:  -7.47335292298829e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  18 
+MSE:  0.00014601614642434228 
+MSE before/after:  0.00016007381873605397 / 0.00014601614642434228 
+MSE difference:  -1.4057672311711692e-05
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  14 
+MSE:  0.00013641675211317148 
+MSE before/after:  0.00014601614642434228 / 0.00013641675211317148 
+MSE difference:  -9.599394311170793e-06
+Generation:  5
+
+Best generation:  5 
+Best member:  9 
+MSE:  0.00011934351457267365 
+MSE before/after:  0.00013641675211317148 / 0.00011934351457267365 
+MSE difference:  -1.7073237540497828e-05
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  11 
+MSE:  0.00011739822908617187 
+MSE before/after:  0.00011934351457267365 / 0.00011739822908617187 
+MSE difference:  -1.9452854865017848e-06
+
+ITERATION 54 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 55 running.
+
+Initial MSE before evolution:  0.00018205800597486933 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  5 
+MSE:  0.00014603763412171717 
+MSE before/after:  0.00018205800597486933 / 0.00014603763412171717 
+MSE difference:  -3.602037185315216e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 55 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 56 running.
+
+Initial MSE before evolution:  0.00011335174597595225 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  24 
+MSE:  0.00010958508434323783 
+MSE before/after:  0.00011335174597595225 / 0.00010958508434323783 
+MSE difference:  -3.766661632714427e-06
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 56 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 57 running.
+
+Initial MSE before evolution:  0.000461631411500406 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  38 
+MSE:  0.00018611601999068777 
+MSE before/after:  0.000461631411500406 / 0.00018611601999068777 
+MSE difference:  -0.00027551539150971825
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.00016869142451519202 
+MSE before/after:  0.00018611601999068777 / 0.00016869142451519202 
+MSE difference:  -1.742459547549575e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  2 
+MSE:  0.00015213570802583012 
+MSE before/after:  0.00016869142451519202 / 0.00015213570802583012 
+MSE difference:  -1.6555716489361893e-05
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  20 
+MSE:  0.00012797602849017574 
+MSE before/after:  0.00015213570802583012 / 0.00012797602849017574 
+MSE difference:  -2.4159679535654387e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 57 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 58 running.
+
+Initial MSE before evolution:  0.00020177674962797151 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  31 
+MSE:  0.00017210127474052563 
+MSE before/after:  0.00020177674962797151 / 0.00017210127474052563 
+MSE difference:  -2.9675474887445885e-05
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  21 
+MSE:  0.00016404963344584072 
+MSE before/after:  0.00017210127474052563 / 0.00016404963344584072 
+MSE difference:  -8.051641294684912e-06
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 58 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 59 running.
+
+Initial MSE before evolution:  0.00014957693189968985 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  10 
+MSE:  0.00014545144016737865 
+MSE before/after:  0.00014957693189968985 / 0.00014545144016737865 
+MSE difference:  -4.1254917323112065e-06
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  19 
+MSE:  0.0001273026037483167 
+MSE before/after:  0.00014545144016737865 / 0.0001273026037483167 
+MSE difference:  -1.8148836419061944e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 59 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 60 running.
+
+Initial MSE before evolution:  0.0001566488801641424 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  23 
+MSE:  0.00013677901325527268 
+MSE before/after:  0.0001566488801641424 / 0.00013677901325527268 
+MSE difference:  -1.9869866908869718e-05
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  15 
+MSE:  0.00013591616879341846 
+MSE before/after:  0.00013677901325527268 / 0.00013591616879341846 
+MSE difference:  -8.628444618542232e-07
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 60 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 61 running.
+
+Initial MSE before evolution:  0.00030780246869302816 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  15 
+MSE:  0.00013860945610616487 
+MSE before/after:  0.00030780246869302816 / 0.00013860945610616487 
+MSE difference:  -0.0001691930125868633
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 61 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 62 running.
+
+Initial MSE before evolution:  0.00041345064026886396 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  45 
+MSE:  0.00030995833176535926 
+MSE before/after:  0.00041345064026886396 / 0.00030995833176535926 
+MSE difference:  -0.0001034923085035047
+Generation:  1
+
+Best generation:  1 
+Best member:  86 
+MSE:  0.00028524706698240197 
+MSE before/after:  0.00030995833176535926 / 0.00028524706698240197 
+MSE difference:  -2.4711264782957293e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  1 
+MSE:  0.00023939993394764278 
+MSE before/after:  0.00028524706698240197 / 0.00023939993394764278 
+MSE difference:  -4.584713303475919e-05
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  14 
+MSE:  0.0001769345385394267 
+MSE before/after:  0.00023939993394764278 / 0.0001769345385394267 
+MSE difference:  -6.246539540821609e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 62 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 63 running.
+
+Initial MSE before evolution:  0.0007878820422376566 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  0 
+MSE:  0.0004833854505950669 
+MSE before/after:  0.0007878820422376566 / 0.0004833854505950669 
+MSE difference:  -0.00030449659164258965
+Generation:  1
+
+Best generation:  1 
+Best member:  1 
+MSE:  0.0001884470558621497 
+MSE before/after:  0.0004833854505950669 / 0.0001884470558621497 
+MSE difference:  -0.0002949383947329172
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  19 
+MSE:  0.00017844175777173793 
+MSE before/after:  0.0001884470558621497 / 0.00017844175777173793 
+MSE difference:  -1.000529809041178e-05
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  20 
+MSE:  0.00017308564574570977 
+MSE before/after:  0.00017844175777173793 / 0.00017308564574570977 
+MSE difference:  -5.356112026028164e-06
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  10 
+MSE:  0.0001561333337495657 
+MSE before/after:  0.00017308564574570977 / 0.0001561333337495657 
+MSE difference:  -1.6952311996144072e-05
+
+ITERATION 63 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 64 running.
+
+Initial MSE before evolution:  0.0002538057718410072 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  16 
+MSE:  0.00021918071108268687 
+MSE before/after:  0.0002538057718410072 / 0.00021918071108268687 
+MSE difference:  -3.462506075832032e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  15 
+MSE:  0.0001419015868650843 
+MSE before/after:  0.00021918071108268687 / 0.0001419015868650843 
+MSE difference:  -7.727912421760257e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 64 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 65 running.
+
+Initial MSE before evolution:  0.00028703649560235723 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  73 
+MSE:  0.00025936585974334727 
+MSE before/after:  0.00028703649560235723 / 0.00025936585974334727 
+MSE difference:  -2.767063585900996e-05
+Generation:  1
+
+Best generation:  1 
+Best member:  11 
+MSE:  0.000192378790342928 
+MSE before/after:  0.00025936585974334727 / 0.000192378790342928 
+MSE difference:  -6.698706940041926e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  20 
+MSE:  0.00018240266392534173 
+MSE before/after:  0.000192378790342928 / 0.00018240266392534173 
+MSE difference:  -9.97612641758628e-06
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  21 
+MSE:  0.00016412224017923801 
+MSE before/after:  0.00018240266392534173 / 0.00016412224017923801 
+MSE difference:  -1.828042374610371e-05
+Generation:  9
+
+ITERATION 65 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 66 running.
+
+Initial MSE before evolution:  0.00019565323089599897 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  22 
+MSE:  0.0001953097608804853 
+MSE before/after:  0.00019565323089599897 / 0.0001953097608804853 
+MSE difference:  -3.434700155136581e-07
+Generation:  3
+
+Best generation:  3 
+Best member:  18 
+MSE:  0.00017839373355215256 
+MSE before/after:  0.0001953097608804853 / 0.00017839373355215256 
+MSE difference:  -1.691602732833275e-05
+Generation:  4
+
+Best generation:  4 
+Best member:  6 
+MSE:  0.0001644132136335147 
+MSE before/after:  0.00017839373355215256 / 0.0001644132136335147 
+MSE difference:  -1.3980519918637872e-05
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  5 
+MSE:  0.00015860242721470668 
+MSE before/after:  0.0001644132136335147 / 0.00015860242721470668 
+MSE difference:  -5.810786418808004e-06
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  2 
+MSE:  0.00014702022399042927 
+MSE before/after:  0.00015860242721470668 / 0.00014702022399042927 
+MSE difference:  -1.1582203224277411e-05
+
+ITERATION 66 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 67 running.
+
+Initial MSE before evolution:  0.00039981147999981715 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  2 
+MSE:  0.0003762933490420304 
+MSE before/after:  0.00039981147999981715 / 0.0003762933490420304 
+MSE difference:  -2.3518130957786757e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  12 
+MSE:  0.00030832911970323244 
+MSE before/after:  0.0003762933490420304 / 0.00030832911970323244 
+MSE difference:  -6.796422933879795e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  24 
+MSE:  0.00019550840225855342 
+MSE before/after:  0.00030832911970323244 / 0.00019550840225855342 
+MSE difference:  -0.00011282071744467902
+Generation:  4
+
+Best generation:  4 
+Best member:  8 
+MSE:  0.0001927929471916504 
+MSE before/after:  0.00019550840225855342 / 0.0001927929471916504 
+MSE difference:  -2.7154550669030277e-06
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  24 
+MSE:  0.0001546217331054353 
+MSE before/after:  0.0001927929471916504 / 0.0001546217331054353 
+MSE difference:  -3.81712140862151e-05
+Generation:  7
+
+Best generation:  7 
+Best member:  8 
+MSE:  0.0001354792285322236 
+MSE before/after:  0.0001546217331054353 / 0.0001354792285322236 
+MSE difference:  -1.9142504573211705e-05
+Generation:  8
+
+Best generation:  8 
+Best member:  58 
+MSE:  0.00010964666195284636 
+MSE before/after:  0.0001354792285322236 / 0.00010964666195284636 
+MSE difference:  -2.5832566579377225e-05
+Generation:  9
+
+ITERATION 67 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 68 running.
+
+Initial MSE before evolution:  0.00023204143771300118 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  24 
+MSE:  0.00013694082403353322 
+MSE before/after:  0.00023204143771300118 / 0.00013694082403353322 
+MSE difference:  -9.510061367946795e-05
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  5 
+MSE:  0.00012814103363985974 
+MSE before/after:  0.00013694082403353322 / 0.00012814103363985974 
+MSE difference:  -8.79979039367348e-06
+Generation:  5
+
+Best generation:  5 
+Best member:  0 
+MSE:  0.00012229540578756942 
+MSE before/after:  0.00012814103363985974 / 0.00012229540578756942 
+MSE difference:  -5.8456278522903225e-06
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 68 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 69 running.
+
+Initial MSE before evolution:  0.00045936089531409236 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  92 
+MSE:  0.00018604050195271014 
+MSE before/after:  0.00045936089531409236 / 0.00018604050195271014 
+MSE difference:  -0.0002733203933613822
+Generation:  1
+
+Best generation:  1 
+Best member:  13 
+MSE:  0.00014715354828650866 
+MSE before/after:  0.00018604050195271014 / 0.00014715354828650866 
+MSE difference:  -3.8886953666201476e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  12 
+MSE:  0.00011923882599036036 
+MSE before/after:  0.00014715354828650866 / 0.00011923882599036036 
+MSE difference:  -2.7914722296148298e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  20 
+MSE:  0.00011532256288895079 
+MSE before/after:  0.00011923882599036036 / 0.00011532256288895079 
+MSE difference:  -3.916263101409577e-06
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  20 
+MSE:  0.00011179313306762093 
+MSE before/after:  0.00011532256288895079 / 0.00011179313306762093 
+MSE difference:  -3.5294298213298542e-06
+Generation:  7
+
+Best generation:  7 
+Best member:  91 
+MSE:  0.00011034138828257187 
+MSE before/after:  0.00011179313306762093 / 0.00011034138828257187 
+MSE difference:  -1.4517447850490603e-06
+Generation:  8
+
+Best generation:  8 
+Best member:  0 
+MSE:  9.821019438941382e-05 
+MSE before/after:  0.00011034138828257187 / 9.821019438941382e-05 
+MSE difference:  -1.213119389315805e-05
+Generation:  9
+
+ITERATION 69 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 70 running.
+
+Initial MSE before evolution:  0.0004144253904918678 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  19 
+MSE:  0.00016188262144532377 
+MSE before/after:  0.0004144253904918678 / 0.00016188262144532377 
+MSE difference:  -0.000252542769046544
+Generation:  2
+
+Best generation:  2 
+Best member:  10 
+MSE:  0.00016177968737820893 
+MSE before/after:  0.00016188262144532377 / 0.00016177968737820893 
+MSE difference:  -1.0293406711484022e-07
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  4 
+MSE:  0.0001535239131352341 
+MSE before/after:  0.00016177968737820893 / 0.0001535239131352341 
+MSE difference:  -8.255774242974835e-06
+Generation:  8
+
+Best generation:  8 
+Best member:  15 
+MSE:  0.0001223147969803629 
+MSE before/after:  0.0001535239131352341 / 0.0001223147969803629 
+MSE difference:  -3.120911615487118e-05
+Generation:  9
+
+ITERATION 70 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 71 running.
+
+Initial MSE before evolution:  0.0008551110672854318 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  20 
+MSE:  0.000667085877168717 
+MSE before/after:  0.0008551110672854318 / 0.000667085877168717 
+MSE difference:  -0.00018802519011671477
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  11 
+MSE:  0.0002693971135700918 
+MSE before/after:  0.000667085877168717 / 0.0002693971135700918 
+MSE difference:  -0.0003976887635986252
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  4 
+MSE:  0.00023784718595116556 
+MSE before/after:  0.0002693971135700918 / 0.00023784718595116556 
+MSE difference:  -3.1549927618926244e-05
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 71 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 72 running.
+
+Initial MSE before evolution:  0.00025147626656357833 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  16 
+MSE:  0.00017209079595332478 
+MSE before/after:  0.00025147626656357833 / 0.00017209079595332478 
+MSE difference:  -7.938547061025355e-05
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  19 
+MSE:  0.00016950217480723735 
+MSE before/after:  0.00017209079595332478 / 0.00016950217480723735 
+MSE difference:  -2.5886211460874285e-06
+Generation:  4
+
+Best generation:  4 
+Best member:  3 
+MSE:  0.00016797586107745834 
+MSE before/after:  0.00016950217480723735 / 0.00016797586107745834 
+MSE difference:  -1.5263137297790114e-06
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  71 
+MSE:  0.00016428438506129915 
+MSE before/after:  0.00016797586107745834 / 0.00016428438506129915 
+MSE difference:  -3.691476016159191e-06
+
+ITERATION 72 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 73 running.
+
+Initial MSE before evolution:  0.00017292923527659882 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  9 
+MSE:  0.000157875818057201 
+MSE before/after:  0.00017292923527659882 / 0.000157875818057201 
+MSE difference:  -1.5053417219397817e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  18 
+MSE:  0.0001417259908264549 
+MSE before/after:  0.000157875818057201 / 0.0001417259908264549 
+MSE difference:  -1.6149827230746113e-05
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 73 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 74 running.
+
+Initial MSE before evolution:  0.0008115673665372536 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  36 
+MSE:  0.00038342300310406863 
+MSE before/after:  0.0008115673665372536 / 0.00038342300310406863 
+MSE difference:  -0.00042814436343318495
+Generation:  1
+
+Best generation:  1 
+Best member:  14 
+MSE:  0.00021534132869125113 
+MSE before/after:  0.00038342300310406863 / 0.00021534132869125113 
+MSE difference:  -0.0001680816744128175
+Generation:  2
+
+Best generation:  2 
+Best member:  19 
+MSE:  0.00016731642483675362 
+MSE before/after:  0.00021534132869125113 / 0.00016731642483675362 
+MSE difference:  -4.802490385449751e-05
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  10 
+MSE:  0.0001638026959301747 
+MSE before/after:  0.00016731642483675362 / 0.0001638026959301747 
+MSE difference:  -3.5137289065789127e-06
+Generation:  8
+Generation:  9
+
+ITERATION 74 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 75 running.
+
+Initial MSE before evolution:  0.0003905612883449406 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  19 
+MSE:  0.00011542259276132143 
+MSE before/after:  0.0003905612883449406 / 0.00011542259276132143 
+MSE difference:  -0.00027513869558361915
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 75 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 76 running.
+
+Initial MSE before evolution:  0.0005920424278167917 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  5 
+MSE:  0.00039798440809847666 
+MSE before/after:  0.0005920424278167917 / 0.00039798440809847666 
+MSE difference:  -0.00019405801971831508
+Generation:  2
+
+Best generation:  2 
+Best member:  24 
+MSE:  0.00031465065119318133 
+MSE before/after:  0.00039798440809847666 / 0.00031465065119318133 
+MSE difference:  -8.333375690529533e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  17 
+MSE:  0.00014503992672909826 
+MSE before/after:  0.00031465065119318133 / 0.00014503992672909826 
+MSE difference:  -0.00016961072446408307
+Generation:  4
+
+Best generation:  4 
+Best member:  10 
+MSE:  0.0001285226159984527 
+MSE before/after:  0.00014503992672909826 / 0.0001285226159984527 
+MSE difference:  -1.651731073064555e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 76 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 77 running.
+
+Initial MSE before evolution:  0.0005593879372368152 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  0 
+MSE:  0.00013186895674300098 
+MSE before/after:  0.0005593879372368152 / 0.00013186895674300098 
+MSE difference:  -0.0004275189804938143
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  14 
+MSE:  0.00011864675844324677 
+MSE before/after:  0.00013186895674300098 / 0.00011864675844324677 
+MSE difference:  -1.3222198299754211e-05
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 77 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 78 running.
+
+Initial MSE before evolution:  0.00028389212486648103 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  8 
+MSE:  0.0002308673062722186 
+MSE before/after:  0.00028389212486648103 / 0.0002308673062722186 
+MSE difference:  -5.302481859426243e-05
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  4 
+MSE:  0.00018011695282189928 
+MSE before/after:  0.0002308673062722186 / 0.00018011695282189928 
+MSE difference:  -5.075035345031932e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  16 
+MSE:  0.00013798364872102324 
+MSE before/after:  0.00018011695282189928 / 0.00013798364872102324 
+MSE difference:  -4.213330410087604e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 78 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 79 running.
+
+Initial MSE before evolution:  0.00036675168811132607 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  46 
+MSE:  0.00024074946337544908 
+MSE before/after:  0.00036675168811132607 / 0.00024074946337544908 
+MSE difference:  -0.000126002224735877
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  2 
+MSE:  0.00022004493007170262 
+MSE before/after:  0.00024074946337544908 / 0.00022004493007170262 
+MSE difference:  -2.0704533303746457e-05
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  9 
+MSE:  0.00020463142619282868 
+MSE before/after:  0.00022004493007170262 / 0.00020463142619282868 
+MSE difference:  -1.5413503878873938e-05
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 79 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 80 running.
+
+Initial MSE before evolution:  0.00021755834962149326 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  98 
+MSE:  0.0001061503738025898 
+MSE before/after:  0.00021755834962149326 / 0.0001061503738025898 
+MSE difference:  -0.00011140797581890346
+Generation:  1
+
+Best generation:  1 
+Best member:  86 
+MSE:  8.932843921981107e-05 
+MSE before/after:  0.0001061503738025898 / 8.932843921981107e-05 
+MSE difference:  -1.6821934582778727e-05
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  94 
+MSE:  8.620151288797325e-05 
+MSE before/after:  8.932843921981107e-05 / 8.620151288797325e-05 
+MSE difference:  -3.1269263318378253e-06
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  49 
+MSE:  7.604260256383447e-05 
+MSE before/after:  8.620151288797325e-05 / 7.604260256383447e-05 
+MSE difference:  -1.0158910324138776e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 80 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 81 running.
+
+Initial MSE before evolution:  0.00038512959445473864 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  22 
+MSE:  0.0002654213596855497 
+MSE before/after:  0.00038512959445473864 / 0.0002654213596855497 
+MSE difference:  -0.00011970823476918895
+Generation:  2
+
+Best generation:  2 
+Best member:  11 
+MSE:  0.00025876594626007756 
+MSE before/after:  0.0002654213596855497 / 0.00025876594626007756 
+MSE difference:  -6.65541342547213e-06
+Generation:  3
+
+Best generation:  3 
+Best member:  19 
+MSE:  0.00014690401448254142 
+MSE before/after:  0.00025876594626007756 / 0.00014690401448254142 
+MSE difference:  -0.00011186193177753614
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  9 
+MSE:  0.00014198513693967086 
+MSE before/after:  0.00014690401448254142 / 0.00014198513693967086 
+MSE difference:  -4.91887754287056e-06
+Generation:  8
+Generation:  9
+
+ITERATION 81 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 82 running.
+
+Initial MSE before evolution:  0.00034684303591442746 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  2 
+MSE:  0.0001558257642815035 
+MSE before/after:  0.00034684303591442746 / 0.0001558257642815035 
+MSE difference:  -0.00019101727163292398
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  2 
+MSE:  0.00014912314204972753 
+MSE before/after:  0.0001558257642815035 / 0.00014912314204972753 
+MSE difference:  -6.702622231775956e-06
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  16 
+MSE:  0.00014492421538714667 
+MSE before/after:  0.00014912314204972753 / 0.00014492421538714667 
+MSE difference:  -4.19892666258086e-06
+
+ITERATION 82 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 83 running.
+
+Initial MSE before evolution:  0.00014990960202016074 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  19 
+MSE:  0.00014773465779435816 
+MSE before/after:  0.00014990960202016074 / 0.00014773465779435816 
+MSE difference:  -2.174944225802577e-06
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  6 
+MSE:  0.00013475023517280606 
+MSE before/after:  0.00014773465779435816 / 0.00013475023517280606 
+MSE difference:  -1.2984422621552103e-05
+Generation:  8
+
+Best generation:  8 
+Best member:  56 
+MSE:  0.00013261269301892463 
+MSE before/after:  0.00013475023517280606 / 0.00013261269301892463 
+MSE difference:  -2.1375421538814235e-06
+Generation:  9
+
+ITERATION 83 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 84 running.
+
+Initial MSE before evolution:  0.0002771505500376288 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  0 
+MSE:  0.00015710401078689612 
+MSE before/after:  0.0002771505500376288 / 0.00015710401078689612 
+MSE difference:  -0.0001200465392507327
+Generation:  1
+
+Best generation:  1 
+Best member:  22 
+MSE:  0.00010822393012593951 
+MSE before/after:  0.00015710401078689612 / 0.00010822393012593951 
+MSE difference:  -4.888008066095661e-05
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  19 
+MSE:  0.00010361819341598777 
+MSE before/after:  0.00010822393012593951 / 0.00010361819341598777 
+MSE difference:  -4.605736709951738e-06
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  22 
+MSE:  9.960775248045499e-05 
+MSE before/after:  0.00010361819341598777 / 9.960775248045499e-05 
+MSE difference:  -4.01044093553278e-06
+
+ITERATION 84 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 85 running.
+
+Initial MSE before evolution:  0.00015247292500136084 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  18 
+MSE:  0.00014612745809634422 
+MSE before/after:  0.00015247292500136084 / 0.00014612745809634422 
+MSE difference:  -6.345466905016624e-06
+Generation:  8
+Generation:  9
+
+ITERATION 85 SHOWED INEFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 86 running.
+
+Initial MSE before evolution:  0.00031513841795669325 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  5 
+MSE:  0.0002556389266951439 
+MSE before/after:  0.00031513841795669325 / 0.0002556389266951439 
+MSE difference:  -5.9499491261549365e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  9 
+MSE:  0.00015388007711084677 
+MSE before/after:  0.0002556389266951439 / 0.00015388007711084677 
+MSE difference:  -0.00010175884958429712
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  7 
+MSE:  0.0001469236848122241 
+MSE before/after:  0.00015388007711084677 / 0.0001469236848122241 
+MSE difference:  -6.95639229862267e-06
+Generation:  5
+
+Best generation:  5 
+Best member:  16 
+MSE:  0.00014282937542768595 
+MSE before/after:  0.0001469236848122241 / 0.00014282937542768595 
+MSE difference:  -4.094309384538149e-06
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  19 
+MSE:  0.0001420433099062305 
+MSE before/after:  0.00014282937542768595 / 0.0001420433099062305 
+MSE difference:  -7.860655214554646e-07
+
+ITERATION 86 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 87 running.
+
+Initial MSE before evolution:  0.00014359780330887515 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  1 
+MSE:  0.00011408931145549963 
+MSE before/after:  0.00014359780330887515 / 0.00011408931145549963 
+MSE difference:  -2.9508491853375522e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  11 
+MSE:  0.00010961909492652688 
+MSE before/after:  0.00011408931145549963 / 0.00010961909492652688 
+MSE difference:  -4.470216528972747e-06
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+
+Best generation:  7 
+Best member:  18 
+MSE:  0.00010224926054491267 
+MSE before/after:  0.00010961909492652688 / 0.00010224926054491267 
+MSE difference:  -7.369834381614206e-06
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  17 
+MSE:  9.691353661216362e-05 
+MSE before/after:  0.00010224926054491267 / 9.691353661216362e-05 
+MSE difference:  -5.3357239327490494e-06
+
+ITERATION 87 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 88 running.
+
+Initial MSE before evolution:  0.0006604048605705228 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  10 
+MSE:  0.00038791300554107567 
+MSE before/after:  0.0006604048605705228 / 0.00038791300554107567 
+MSE difference:  -0.0002724918550294471
+Generation:  2
+
+Best generation:  2 
+Best member:  23 
+MSE:  0.00016998620105485886 
+MSE before/after:  0.00038791300554107567 / 0.00016998620105485886 
+MSE difference:  -0.0002179268044862168
+Generation:  3
+
+Best generation:  3 
+Best member:  15 
+MSE:  0.00016825984526957604 
+MSE before/after:  0.00016998620105485886 / 0.00016825984526957604 
+MSE difference:  -1.7263557852828168e-06
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  20 
+MSE:  0.00015067972557264355 
+MSE before/after:  0.00016825984526957604 / 0.00015067972557264355 
+MSE difference:  -1.7580119696932492e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 88 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 89 running.
+
+Initial MSE before evolution:  0.00026817948321468713 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  12 
+MSE:  0.0001530881796813687 
+MSE before/after:  0.00026817948321468713 / 0.0001530881796813687 
+MSE difference:  -0.00011509130353331843
+Generation:  2
+
+Best generation:  2 
+Best member:  10 
+MSE:  0.0001461354463570139 
+MSE before/after:  0.0001530881796813687 / 0.0001461354463570139 
+MSE difference:  -6.95273332435481e-06
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  8 
+MSE:  0.0001361100356594539 
+MSE before/after:  0.0001461354463570139 / 0.0001361100356594539 
+MSE difference:  -1.0025410697559985e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  4 
+MSE:  0.00012684055869091008 
+MSE before/after:  0.0001361100356594539 / 0.00012684055869091008 
+MSE difference:  -9.269476968543826e-06
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 89 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 90 running.
+
+Initial MSE before evolution:  0.0001805841393008035 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  19 
+MSE:  0.00011220395808315671 
+MSE before/after:  0.0001805841393008035 / 0.00011220395808315671 
+MSE difference:  -6.838018121764678e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 90 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 91 running.
+
+Initial MSE before evolution:  0.0004974615907159304 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  22 
+MSE:  0.00045026722117765797 
+MSE before/after:  0.0004974615907159304 / 0.00045026722117765797 
+MSE difference:  -4.7194369538272455e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  18 
+MSE:  0.00026577068472128653 
+MSE before/after:  0.00045026722117765797 / 0.00026577068472128653 
+MSE difference:  -0.00018449653645637143
+Generation:  4
+
+Best generation:  4 
+Best member:  0 
+MSE:  0.00014242969718853045 
+MSE before/after:  0.00026577068472128653 / 0.00014242969718853045 
+MSE difference:  -0.00012334098753275608
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  1 
+MSE:  0.000122293984958739 
+MSE before/after:  0.00014242969718853045 / 0.000122293984958739 
+MSE difference:  -2.0135712229791457e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 91 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 92 running.
+
+Initial MSE before evolution:  0.0001816294505996517 
+
+Generation:  0
+Generation:  1
+Generation:  2
+
+Best generation:  2 
+Best member:  11 
+MSE:  0.00013416936526450035 
+MSE before/after:  0.0001816294505996517 / 0.00013416936526450035 
+MSE difference:  -4.746008533515136e-05
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 92 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 93 running.
+
+Initial MSE before evolution:  0.0001470719128981929 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  6 
+MSE:  0.00012871273336917223 
+MSE before/after:  0.0001470719128981929 / 0.00012871273336917223 
+MSE difference:  -1.8359179529020656e-05
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+Best generation:  9 
+Best member:  0 
+MSE:  0.00012121797816044903 
+MSE before/after:  0.00012871273336917223 / 0.00012121797816044903 
+MSE difference:  -7.494755208723201e-06
+
+ITERATION 93 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 94 running.
+
+Initial MSE before evolution:  0.00017136926748396105 
+
+Generation:  0
+Generation:  1
+Generation:  2
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  17 
+MSE:  0.00015226839401729354 
+MSE before/after:  0.00017136926748396105 / 0.00015226839401729354 
+MSE difference:  -1.9100873466667515e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 94 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 95 running.
+
+Initial MSE before evolution:  0.000273100472829025 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  3 
+MSE:  0.00018272422668119784 
+MSE before/after:  0.000273100472829025 / 0.00018272422668119784 
+MSE difference:  -9.037624614782714e-05
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  10 
+MSE:  0.00017098736546154028 
+MSE before/after:  0.00018272422668119784 / 0.00017098736546154028 
+MSE difference:  -1.1736861219657557e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  12 
+MSE:  0.00016643573835717918 
+MSE before/after:  0.00017098736546154028 / 0.00016643573835717918 
+MSE difference:  -4.551627104361106e-06
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  9 
+MSE:  0.00016588893641721923 
+MSE before/after:  0.00016643573835717918 / 0.00016588893641721923 
+MSE difference:  -5.468019399599449e-07
+Generation:  9
+
+ITERATION 95 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 96 running.
+
+Initial MSE before evolution:  0.0007973627488465691 
+
+Generation:  0
+Generation:  1
+
+Best generation:  1 
+Best member:  17 
+MSE:  0.0002003256771392002 
+MSE before/after:  0.0007973627488465691 / 0.0002003256771392002 
+MSE difference:  -0.0005970370717073689
+Generation:  2
+
+Best generation:  2 
+Best member:  2 
+MSE:  0.0001756214320835009 
+MSE before/after:  0.0002003256771392002 / 0.0001756214320835009 
+MSE difference:  -2.4704245055699324e-05
+Generation:  3
+
+Best generation:  3 
+Best member:  8 
+MSE:  0.00015725815751334684 
+MSE before/after:  0.0001756214320835009 / 0.00015725815751334684 
+MSE difference:  -1.8363274570154048e-05
+Generation:  4
+Generation:  5
+
+Best generation:  5 
+Best member:  12 
+MSE:  0.0001432881029074038 
+MSE before/after:  0.00015725815751334684 / 0.0001432881029074038 
+MSE difference:  -1.3970054605943035e-05
+Generation:  6
+
+Best generation:  6 
+Best member:  16 
+MSE:  0.0001323485302709187 
+MSE before/after:  0.0001432881029074038 / 0.0001323485302709187 
+MSE difference:  -1.0939572636485117e-05
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 96 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 97 running.
+
+Initial MSE before evolution:  0.0005621371140499993 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  14 
+MSE:  0.00038804539132717623 
+MSE before/after:  0.0005621371140499993 / 0.00038804539132717623 
+MSE difference:  -0.00017409172272282302
+Generation:  1
+
+Best generation:  1 
+Best member:  21 
+MSE:  0.00017185067106412802 
+MSE before/after:  0.00038804539132717623 / 0.00017185067106412802 
+MSE difference:  -0.00021619472026304822
+Generation:  2
+Generation:  3
+
+Best generation:  3 
+Best member:  18 
+MSE:  0.00012516042212992352 
+MSE before/after:  0.00017185067106412802 / 0.00012516042212992352 
+MSE difference:  -4.6690248934204496e-05
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  21 
+MSE:  0.00010482387320212203 
+MSE before/after:  0.00012516042212992352 / 0.00010482387320212203 
+MSE difference:  -2.033654892780149e-05
+Generation:  9
+
+ITERATION 97 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 98 running.
+
+Initial MSE before evolution:  0.00047483225363408336 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  0 
+MSE:  0.0003070922883357573 
+MSE before/after:  0.00047483225363408336 / 0.0003070922883357573 
+MSE difference:  -0.00016773996529832606
+Generation:  1
+
+Best generation:  1 
+Best member:  0 
+MSE:  0.00014232708241251665 
+MSE before/after:  0.0003070922883357573 / 0.00014232708241251665 
+MSE difference:  -0.00016476520592324066
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+
+Best generation:  6 
+Best member:  14 
+MSE:  0.00012112194216861503 
+MSE before/after:  0.00014232708241251665 / 0.00012112194216861503 
+MSE difference:  -2.1205140243901627e-05
+Generation:  7
+Generation:  8
+
+Best generation:  8 
+Best member:  2 
+MSE:  0.00011677718326668279 
+MSE before/after:  0.00012112194216861503 / 0.00011677718326668279 
+MSE difference:  -4.344758901932234e-06
+Generation:  9
+
+ITERATION 98 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 99 running.
+
+Initial MSE before evolution:  0.00032502234367710674 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  1 
+MSE:  0.00029786779606842244 
+MSE before/after:  0.00032502234367710674 / 0.00029786779606842244 
+MSE difference:  -2.71545476086843e-05
+Generation:  1
+
+Best generation:  1 
+Best member:  12 
+MSE:  0.00025894694180350294 
+MSE before/after:  0.00029786779606842244 / 0.00025894694180350294 
+MSE difference:  -3.8920854264919505e-05
+Generation:  2
+
+Best generation:  2 
+Best member:  14 
+MSE:  0.00017639634600191565 
+MSE before/after:  0.00025894694180350294 / 0.00017639634600191565 
+MSE difference:  -8.25505958015873e-05
+Generation:  3
+Generation:  4
+
+Best generation:  4 
+Best member:  10 
+MSE:  0.00014730050936474253 
+MSE before/after:  0.00017639634600191565 / 0.00014730050936474253 
+MSE difference:  -2.909583663717312e-05
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 99 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+
+Iteration: 100 running.
+
+Initial MSE before evolution:  0.0005123626881952552 
+
+Generation:  0
+
+Best generation:  0 
+Best member:  64 
+MSE:  0.00024677986429703545 
+MSE before/after:  0.0005123626881952552 / 0.00024677986429703545 
+MSE difference:  -0.0002655828238982197
+Generation:  1
+
+Best generation:  1 
+Best member:  9 
+MSE:  0.00011145826487522869 
+MSE before/after:  0.00024677986429703545 / 0.00011145826487522869 
+MSE difference:  -0.00013532159942180677
+Generation:  2
+Generation:  3
+Generation:  4
+Generation:  5
+Generation:  6
+Generation:  7
+Generation:  8
+Generation:  9
+
+ITERATION 100 SHOWED EFFECTIVE NEUROEVOLUTION.
+
+ Unsuccessful neuroevolution attempts:  8 
+ Successful neuroevolution attempts:  92 
+ Average standard network MSE:  0.00012546531172931893 
+ Average neuroevolved network MSE:  0.0001325183974351547
