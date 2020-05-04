@@ -14,10 +14,10 @@ def return_univariate(filename, n_rows, target_column):
     :return: univariate data (whichever column is passed as the target column)
     """
     # READ AND CLEAN DATA // -------------------- //
-    data = pd.read_csv(filename)                                    # Read in the data
+    data = pd.read_csv(filename)  # Read in the data
     # Create 1D Target Array to be used in Echo-State Networks
-    target_data = data[target_column].iloc[-n_rows:]                # Create target dataframe
-    data.drop_duplicates(keep=False)                                # Remove useless data (weekend closures...)
+    target_data = data[target_column].iloc[-n_rows:]  # Create target dataframe
+    data.drop_duplicates(keep=False)  # Remove useless data (weekend closures...)
     target_values = target_data.values
     target_array = np.delete(target_values, [1], axis=1)
     return target_array
@@ -35,11 +35,11 @@ def return_multivariate(filename, n_rows, column_names, target_columns):
     :return: multivariate data (whichever column are passed as the target columns)
     """
     # READ AND CLEAN DATA // -------------------- //
-    data = pd.read_csv(filename)                                    # Read in the data
-    data.date = pd.to_datetime(data.date, format='%Y.%m.%d')        # Format data for processing
+    data = pd.read_csv(filename)  # Read in the data
+    data.date = pd.to_datetime(data.date, format='%Y.%m.%d')  # Format data for processing
     data = data.set_index(data.date)
-    data = data[column_names]                                       # Rename columns after setting date as index
-    data.drop_duplicates(keep=False)                                # Remove useless data (weekend closures...)
-    data = data.iloc[-n_rows:]                                      # Locate the last n_rows entries
-    target_data = data[target_columns]                              # Create target array
+    data = data[column_names]  # Rename columns after setting date as index
+    data.drop_duplicates(keep=False)  # Remove useless data (weekend closures...)
+    data = data.iloc[-n_rows:]  # Locate the last n_rows entries
+    target_data = data[target_columns]  # Create target array
     return target_data

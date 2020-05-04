@@ -1,24 +1,24 @@
 # Internals
-import data                             # Read and clean .csv data
-import net                              # Create and modify Echo State Networks
-import optimize                         # Echo-State Network hyperparameter optimization
-import plot                             # Plot data
-import parameters                       # User controlled parameters
+import data             # Read and clean .csv data
+import net              # Create and modify Echo State Networks
+import optimize         # Echo-State Network hyperparameter optimization
+import plot             # Plot data
+import parameters       # User controlled parameters
 # Externals
-import copy                             # For making copies of data
-import numpy as np                      # Numbers processing
-import pandas as pd                     # Multi-dimensional arrays (DataFrame)
+import copy             # For making copies of data
+import numpy as np      # Numbers processing
+import pandas as pd     # Multi-dimensional arrays (DataFrame)
 
+# How many tests to run
+n_iterations = parameters.n_iterations
 # Training and prediction windows
 training_window_size = 0
 prediction_window = parameters.prediction_window
-
 # Window optimization
 n_optimizer_predictions = parameters.n_optimizer_predictions
 smallest_possible_training_window = parameters.smallest_possible_training_window
 largest_possible_training_window = parameters.largest_possible_training_window
 training_window_test_increase = parameters.training_window_test_increase
-
 # Data
 entries_required = (prediction_window * n_optimizer_predictions) \
                    + largest_possible_training_window           # Number of recent entries required from .csv
@@ -26,19 +26,20 @@ target_data = data.return_univariate('eu.csv',
                                      entries_required,
                                      ['open'])                  # Target data - data to train and test on
 prices = 0                                                      # Stores prices to predict - set during execution
-
 # Network
 n_reservoir = parameters.n_reservoir                            # Size of Echo State Network (ESN) hidden state
 spectral_radius = parameters.spectral_radius                    # Spectral radius to use for weights in ESNs
 sparsity = parameters.sparsity                                  # Sparsity to use for weights in ESNs
-noise = parameters.sparsity                                     # Noise to use for training of ESN
+noise = parameters.noise                                        # Noise to use for training of ESN
 input_scaling = parameters.input_scaling                        # Scale ESN input to hidden weights using this value
-
 # Neuroevolution
-n_neuroevolution_predictions = 1                                # Num of predictions to make during each generation
 n_generations = parameters.n_generations                        # Number of generations to run genetic algorithm for
-n_predicted_days = prediction_window \
-                   * n_neuroevolution_predictions               # How many total predicted days in each generation
+n_population = parameters.n_population                          # Number of networks in each generation
+mutation_rate = parameters.mutation_rate                        # Rate at which to mutate the networks
+crossover_rate = parameters.crossover_rate                      # Rate at which networks will crossover to next gen
+n_fitness_predictions = parameters.n_fitness_predictions        # Number of predictions to test fitness upon
+# Amount of tests per network after neuroevolution
+n_test_predictions = parameters.n_test_predictions
 
 
 def run(iteration):
@@ -48,134 +49,177 @@ def run(iteration):
     :return: none
     """
     # CREATE THE ECHO STATE NETWORK // ------------------------------------------------------------------------------ //
-    rng = np.random.RandomState(iteration)                  # Seed the random state
+    rng = np.random.RandomState(iteration)  # Seed the random state
     esn = net.create_neural_network(1, 1, n_reservoir,
                                     spectral_radius,
                                     sparsity,
                                     noise,
                                     input_scaling,
-                                    rng, True)              # Create Echo-State Network
+                                    rng, True)  # Create Echo-State Network
 
     # OPTIMIZE THE ECHO STATE NETWORK HYPERPARAMETERS // ------------------------------------------------------------ //
-    global training_window_size     # Globalize training_window_size to set it to the optimal window
-    if training_window_size == 0:       # If training window isn't set yet (is 0)
+    global training_window_size  # Globalize training_window_size to set it to the optimal window
+    if training_window_size == 0:  # If training window isn't set yet (is 0)
         training_window_size = get_best_training_window(prediction_window, n_optimizer_predictions,
                                                         esn, target_data,
                                                         smallest_possible_training_window,
                                                         largest_possible_training_window,
                                                         training_window_test_increase)
-        global prices               # Globalize prices to set the prices that will be predicted each iteration
-        prices = target_data[training_window_size:training_window_size + n_predicted_days]
+        global prices  # Globalize prices to set the prices that will be predicted each iteration
+        prices = target_data[training_window_size:training_window_size + prediction_window]
 
-    # USE EVOLUTIONARY ALGORITHM TO TRAIN ECHO STATE NETWORK // ----------------------------------------------------- //
-    # Storage for prediction data
-    non_evolved_prediction = np.ones(n_predicted_days)  # Store predictions before neuroevolution
-    evolved_predictions = np.ones(n_predicted_days)     # Store predictions after neuroevolution
+        # Plot OHLC using plotly
+        write_ohlc_html(entries_required, training_window_size + prediction_window)
+
+    # // ------------------------------------------------ (BASE ESN) ------------------------------------------------ //
     # Predictions DataFrame to hold each evolution which improved prediction accuracy
     predictions_df = pd.DataFrame(columns=(['generation', 'prediction']))
 
-    # // ---------------------------------------------- (GENERATION 0) ---------------------------------------------- //
-    esn.fit(np.ones(training_window_size), target_data[0:training_window_size])     # Train network on data
-    prediction = esn.predict(np.ones(prediction_window))                            # Predict a window
-    non_evolved_prediction[0:prediction_window] = prediction[:, 0]                  # Add to array
+    # Fit initial network
+    esn.fit(np.ones(training_window_size), target_data[0:training_window_size])  # Train network on data
 
-    # For managing weights during evolution stage
-    weights = copy.deepcopy(esn.W_out)
-    # Make copies for storing initial/best weights to evaluate later
-    initial_weights = copy.deepcopy(weights)
-    best_weights = copy.deepcopy(weights)
+    # Set the benchmark network results
+    best_generation = -1  # -1 is no evolution at all
+    best_esn = net.copy_neural_network(esn)  # Set best esn
+    best_mse = net.get_fitness(esn, prices,
+                               prediction_window, n_fitness_predictions)  # Set best MSE
 
-    # Create a copy of generation 0's prediction as the last_good_prediction as it is currently the only prediction
-    last_good_prediction = copy.deepcopy(non_evolved_prediction)                    # Stores most recent improvement
-    best_generation = 0                                                             # Stores the best generation
+    # Perform prediction using initial network
+    prediction = esn.predict(np.ones(prediction_window))  # Predict a window
+    predictions = np.ones(prediction_window)  # For holding any predictions
+    predictions[0:prediction_window] = prediction[:, 0]  # Place prediction in array
+    best_prediction = copy.deepcopy(predictions)  # Set best prediction
 
-    # Append the predictions DataFrame with generation 0's prediction
-    iteration_df = predictions_df.append({'generation': 0, 'prediction': non_evolved_prediction}, ignore_index=True)
+    # Print initial network information
+    print("Initial MSE before evolution: ", best_mse, "\n")
+
+    # Append the predictions DataFrame with the initial best prediction
+    iteration_df = predictions_df.append({'generation': -1, 'prediction': best_prediction}, ignore_index=True)
     predictions_df = copy.deepcopy(iteration_df)
 
-    # // ------------------------------------- (GENERATIONS 1 TO N_GENERATIONS) ------------------------------------- //
-    for generation in range(1, n_generations, 1):
-        improvement = False
+    # USE EVOLUTIONARY ALGORITHM TO TRAIN ECHO STATE NETWORK // ----------------------------------------------------- //
+    population_of_esns = [net.copy_neural_network(esn)] * n_population  # Create initial population
 
-        # Perform mutation on feedback weights
-        backup_weights = copy.deepcopy(weights)
-        weights = net.mutate_weights(weights, parameters.mutation_rate)
-        esn.W_out = copy.deepcopy(weights)
+    # Create the extreme lists to hold extreme prediction values - used for y-range calculations during plotting
+    training_prediction_extremes = [99.0, -99.0]
 
-        # Calculate mean-squared error of non-evolved prediction
-        before_mse = net.get_mse(prices, last_good_prediction)
+    # Perform neuroevolution
+    for generation in range(0, n_generations, 1):
+        print("Generation: ", generation)
+        lowest_mse = best_mse
+        for member_id, member in enumerate(population_of_esns):
+            # Evolve the weights
+            weights = copy.deepcopy(member.W_out)
+            weights[0] = net.mutate_weights(weights[0], mutation_rate)
+            member.W_out = copy.deepcopy(weights)
 
-        # Perform prediction using evolved network
-        prediction = esn.predict(np.ones(prediction_window))
-        evolved_predictions[0:0 + prediction_window] = prediction[:, 0]
+            # Get fitness of the member
+            mse_fitness = net.get_fitness(member, prices, prediction_window, n_fitness_predictions)
 
-        # Calculate mean-squared error of evolved network's prediction
-        after_mse = net.get_mse(prices, evolved_predictions)
+            # If this member has the best fitness so far
+            if mse_fitness < lowest_mse:
+                # Set the benchmark network results
+                best_esn = net.copy_neural_network(member)  # Stores the best member
+                best_mse = mse_fitness  # And the best mse (fitness)
+                # Perform prediction using this member
+                prediction = member.predict(np.ones(prediction_window))
+                prediction_array = np.ones(prediction_window)
+                prediction_array[0:prediction_window] = prediction[:, 0]
+                best_prediction = copy.deepcopy(prediction_array)
+                # Store ID of this member
+                best_member_id = member_id
 
-        # Calculate the difference in MSE
-        mse_difference = after_mse - before_mse
-
-        if mse_difference < 0:  # If MSE got smaller (good) - the MSE improved.
-            last_good_prediction = copy.deepcopy(evolved_predictions)   # This is the most recent good prediction!
-            iteration_df = predictions_df.append({'generation': (generation), 'prediction': last_good_prediction},
-                                                 ignore_index=True)
-            predictions_df = iteration_df
-
+        # Will be the case if any member improved the MSE from last generation
+        if best_mse < lowest_mse:
             best_generation = generation
-            best_weights = copy.deepcopy(esn.W_out)
-
             # Print generation information
-            print("Best generation: ", generation, "\nMSE before/after: ", before_mse, "/", after_mse,
-                  "\nMSE difference: ", mse_difference, "\nImprovement: ", improvement)
-        else:
-            esn.W_out = copy.deepcopy(backup_weights)
+            print("\nBest generation: ", generation,
+                  "\nBest member: ", best_member_id,
+                  "\nMSE: ", best_mse,
+                  "\nMSE before/after: ", lowest_mse, "/", best_mse, "\nMSE difference: ", best_mse - lowest_mse)
+            # Append the predictions DataFrame with generation's best prediction
+            iteration_df = predictions_df.append({'generation': generation,
+                                                  'prediction': best_prediction},
+                                                 ignore_index=True)
+            predictions_df = copy.deepcopy(iteration_df)
+            # Update extremes list for y-range of plot
+            if min(prediction) < training_prediction_extremes[0]:
+                training_prediction_extremes[0] = min(prediction)[0]
+            if max(prediction) > training_prediction_extremes[1]:
+                training_prediction_extremes[1] = max(prediction)[0]
+
+        # Perform crossover
+        population_of_esns = net.perform_crossover(best_esn, population_of_esns, crossover_rate)
 
     # Plot predictions from training
     plot.plot_predictions(predictions_df, target_data,
-                          training_window_size + n_predicted_days, n_predicted_days,
-                          'Training Predictions (' + str(iteration + 1) + ').html', parameters.html_auto_show)
+                          training_window_size + prediction_window, training_prediction_extremes, prediction_window,
+                          'Training Predictions (' + str(iteration) + ').html', parameters.training_html_auto_show)
 
     # TEST EVOLVED ECHO-STATE NETWORK ON NEW TARGET DATA // --------------------------------------------------------- //
-    # Create DataFrame for prediction tests
-    non_evolved_test_predictions_df = pd.DataFrame(columns=(['generation', 'prediction']))
-    evolved_test_predictions_df = pd.DataFrame(columns=(['generation', 'prediction']))
+    # Create DataFrames for prediction tests
+    dtypes = np.dtype([
+        ('generation', str),
+        ('prediction', np.float64)])
+    columns_data = np.empty(0, dtype=dtypes)
+    non_evolved_test_predictions_df = pd.DataFrame(columns_data)
+    evolved_test_predictions_df = pd.DataFrame(columns_data)
+    # Create lists to hold the test network MSE calculations
+    non_evolved_mse_list = [0.0] * n_test_predictions
+    evolved_mse_list = [0.0] * n_test_predictions
+    # Create the extreme lists to hold extreme prediction values - used for y-range calculations during plotting
+    non_evolved_prediction_extremes = [99.0, -99.0]
+    evolved_prediction_extremes = [99.0, -99.0]
 
-    # NON-EVOLVED NETWORK PREDICTIONS
-    esn.W_out = copy.deepcopy(initial_weights)
-    # ---------------------------------------------------------------------------------------------------------------- #
-    for p in range(1, 4, 1):
+    # NON-EVOLVED NETWORK PREDICTIONS  // --------------------------------------------------------------------------- //
+    for p in range(1, n_test_predictions, 1):
         # Perform prediction using non-evolved network
-        new_prediction = esn.predict(np.ones(prediction_window))
-        non_evolved_predictions = np.ones(n_predicted_days)
-        non_evolved_predictions[0:0 + prediction_window] = new_prediction[:, 0]
-
-        # prediction_number = '(' + str(p) + ')'
-        temp_df = non_evolved_test_predictions_df.append({'generation': str(0),
-                                                          'prediction': non_evolved_predictions},
+        prediction = esn.predict(np.ones(prediction_window))
+        prediction_array = np.ones(prediction_window)
+        prediction_array[0:0 + prediction_window] = prediction[:, 0]
+        non_evolved_mse_list[p] = net.get_mse(prices, prediction_array)
+        # Append the predictions DataFrame with non-evolved network prediction
+        temp_df = non_evolved_test_predictions_df.append({'generation': str(-1),
+                                                          'prediction': prediction_array},
                                                          ignore_index=True)
         non_evolved_test_predictions_df = copy.deepcopy(temp_df)
+        # Update extremes list for y-range of plot
+        if min(prediction) < non_evolved_prediction_extremes[0]:
+            non_evolved_prediction_extremes[0] = min(prediction)[0]
+        if max(prediction) > non_evolved_prediction_extremes[1]:
+            non_evolved_prediction_extremes[1] = max(prediction)[0]
 
-    # EVOLVED NETWORK PREDICTIONS
-    if best_generation != 0:
-        esn.W_out = copy.deepcopy(best_weights)
-        # ------------------------------------------------------------------------------------------------------------ #
-        for p in range(1, 4, 1):
+    # EVOLVED NETWORK PREDICTIONS // -------------------------------------------------------------------------------- //
+    if best_generation != -1:
+        for p in range(1, n_test_predictions, 1):
             # Perform prediction using evolved network
-            new_prediction = esn.predict(np.ones(prediction_window))
-            evolved_predictions = np.ones(n_predicted_days)
-            evolved_predictions[0:0 + prediction_window] = new_prediction[:, 0]
-
+            neuroevolution_prediction = best_esn.predict(np.ones(prediction_window))
+            prediction_array = np.ones(prediction_window)
+            prediction_array[0:0 + prediction_window] = neuroevolution_prediction[:, 0]
+            evolved_mse_list[p] = net.get_mse(prices, prediction_array)
+            # Append the predictions DataFrame with evolved network prediction
             temp_df = evolved_test_predictions_df.append({'generation': str(best_generation),
-                                                          'prediction': evolved_predictions},
+                                                          'prediction': prediction_array},
                                                          ignore_index=True)
             evolved_test_predictions_df = copy.deepcopy(temp_df)
+            # Update extremes list for y-range of plot
+            if min(neuroevolution_prediction) < evolved_prediction_extremes[0]:
+                evolved_prediction_extremes[0] = min(neuroevolution_prediction)[0]
+            if max(neuroevolution_prediction) > evolved_prediction_extremes[1]:
+                evolved_prediction_extremes[1] = max(neuroevolution_prediction)[0]
 
-    # PLOT TESTING PREDICTIONS
-    current_iteration = iteration + 1
+    # Update the prediction extremes array to pass into plotting function
+    all_prediction_extremes = non_evolved_prediction_extremes
+    if not evolved_prediction_extremes[0] == 99.0 and not evolved_prediction_extremes[1] == -99.0:
+        all_prediction_extremes += evolved_prediction_extremes
+
+    # PLOT TESTING PREDICTIONS // ----------------------------------------------------------------------------------- //
     plot.plot_test_predictions(non_evolved_test_predictions_df, evolved_test_predictions_df, target_data,
-                               training_window_size + n_predicted_days, n_predicted_days,
-                               'Testing Predictions (' + str(current_iteration) + ').html', parameters.html_auto_show)
-    return
+                               all_prediction_extremes, training_window_size + prediction_window, prediction_window,
+                               'Testing Predictions (' + str(iteration) + ').html', parameters.testing_html_auto_show)
+
+    # RETURN THE RESULTS OF THIS ITERATION // ----------------------------------------------------------------------- //
+    return non_evolved_mse_list, evolved_mse_list
 
 
 def write_ohlc_html(n_target_entries, n_training_data):
@@ -190,7 +234,7 @@ def write_ohlc_html(n_target_entries, n_training_data):
                                              ['open', 'high', 'low', 'close', 'volume'],
                                              ['open', 'high', 'low', 'close'])
     ohlc_to_plot = raw_ohlc_data.iloc[:n_training_data]
-    plot.plot_ohlc(ohlc_to_plot, 'Date', 'Price', 'EUR-USD', 'OHLC.html', parameters.html_auto_show)
+    plot.plot_ohlc(ohlc_to_plot, 'Date', 'Price', 'EUR-USD', 'OHLC.html', parameters.ohlc_html_auto_show)
 
 
 def get_best_training_window(prediction_window_to_optimize: int, n_predictions: int, esn: object,
@@ -202,20 +246,78 @@ def get_best_training_window(prediction_window_to_optimize: int, n_predictions: 
     :param n_predictions: number of windows to predict
     :param esn: the echo state network
     :param target_data_for_optimization: training and testing data
-    :param max_possible_window: Max possible window can't be > (target data length - n_predicted_days)
+    :param max_possible_window: Max possible window can't be > (target data length - prediction_window)
     :param min_possible_window:  Min possible window to train on before predicting the prediction window
     :param training_window_increase: This is how much training window will increase between window tests
     :return: optimal training window
     """
-    predicted_days = prediction_window_to_optimize * n_predictions              # Number of days in total to predict
+    predicted_days = prediction_window_to_optimize * n_predictions  # Number of days in total to predict
     training_window_best, best_mse_ = optimize.optimize_training_window_(training_window_increase,
                                                                          min_possible_window, max_possible_window,
                                                                          prediction_window_to_optimize, predicted_days,
                                                                          esn, target_data_for_optimization)
-    print("Optimal training window: ", training_window_best, "\n", "Mean squared error: ", best_mse_)
+    print("Optimal training window: ", training_window_best, "\n", "Mean squared error: ", best_mse_, "\n")
     return training_window_best
 
 
-for i in range(1, 101, 1):
-    print ("\nIteration: " + str(i) + " running.\n")
-    run(i)
+def update_results(evolved_worse_count, evolved_better_count):
+    """
+    :rtype: int
+    :param evolved_worse_count: number of times the non-evolved network has been more efficient so far
+    :param evolved_better_count: number of times the evolved network has been more efficient so far
+    :return: updated results
+    """
+    if all(v == 0 for v in evolved_mses):  # If no evolution, less effective
+        evolved_worse_count += 1
+        print("\nITERATION " + str(i) + " SHOWED INEFFECTIVE NEUROEVOLUTION.\n")
+    else:  # If there was an evolution
+        if np.average(evolved_mses) >= np.average(non_evolved_mses):  # If evolved ESN performed worse
+            evolved_worse_count += 1  # Increment ineffective count
+            print("\nITERATION " + str(i) + " SHOWED INEFFECTIVE NEUROEVOLUTION.\n")
+        else:  # If evolved ESN performed better
+            evolved_better_count += 1  # Increment effective count
+            print("\nITERATION " + str(i) + " SHOWED EFFECTIVE NEUROEVOLUTION.\n")
+    return evolved_worse_count, evolved_better_count
+
+
+def plot_results(evolved_worse_count, evolved_better_count):
+    """
+    :rtype: none
+    :param evolved_worse_count: number of times the non-evolved network has been more efficient so far
+    :param evolved_better_count: number of times the evolved network has been more efficient so far
+    :return: none
+    """
+    plot.plot_results_(evolved_worse_count, evolved_better_count,  # Plot results for analysis
+                       'results.html', parameters.results_html_auto_show)
+
+
+# Print execution information to console
+print("Neuroevolution for Foreign Exchange Prediction Evaluation System.\n\n"
+      " Target: ", prediction_window, " day(s).\n"
+                                      " Hidden units: ", n_reservoir, "\n",
+      "Spectral radius: ", spectral_radius, "\n",
+      "Sparsity: ", sparsity, "\n",
+      "Noise: ", noise, "\n",
+      "Input scaling: ", input_scaling, "\n\n",
+
+      "Generations: ", n_generations, "\n",
+      "Population size: ", n_population, "\n",
+      "Mutation rate: ", mutation_rate, "\n",
+      "Crossover rate: ", crossover_rate, "\n\n",
+
+      "Number of fitness calculation predictions: ", n_fitness_predictions, "\n",
+      "Number of optimizer predictions: ", n_optimizer_predictions, "\n",
+      "Number of test predictions per final network: ", n_test_predictions, "\n\n")
+# Initialize the variables for determining effectiveness
+n_evolved_worse = 0
+n_evolved_better = 0
+# Cycle through the iterations to train and test fitted/evolved Echo State Networks
+for i in range(1, n_iterations + 1, 1):
+    # Print current iteration
+    print("\nIteration: " + str(i) + " running.\n")
+    # Run program and return mse values for networks before/after neuroevolution
+    non_evolved_mses, evolved_mses = run(i)
+    # Update the test results
+    n_evolved_less_effective, n_evolved_more_effective = update_results(n_evolved_worse, n_evolved_better)
+# Plot the test results
+plot_results(n_evolved_less_effective, n_evolved_more_effective)

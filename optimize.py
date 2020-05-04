@@ -1,6 +1,7 @@
 # Internals
 import plot             # Plot data
 import parameters       # User controlled parameters
+from net import get_mse
 # Externals
 import numpy as np      # Numbers processing
 import pandas as pd     # Multi-dimensional arrays (DataFrame)
@@ -26,32 +27,32 @@ def optimize_training_window_(window_increase_, training_field_start, training_f
     best_mse = 99999
     best_training = 0
 
-    predictions = np.ones(n_predicted_days)     # Prediction array
-    final_target = target_data_                 # The target data to use for training and testing
+    predictions = np.ones(n_predicted_days)  # Prediction array
+    final_target = target_data_  # The target data to use for training and testing
     training_df = pd.DataFrame(columns=(['window', 'mse']))
 
-    for i in range (training_field_start, training_field_end + 1, window_increase_):
+    for i in range(training_field_start, training_field_end + 1, window_increase_):
         # Create training and prediction data lengths
         train_length = i
         print("Testing ", train_length, " training window length.")
 
         # TEST WITH THE ECHO STATE NETWORK // -------------------- //
         for j in range(0, n_predicted_days, prediction_window):
-            esn.fit(np.ones(train_length), final_target[j:train_length + j])    # Teacher-force output
-            prediction = esn.predict(np.ones(prediction_window))                # Predict next (future) values
-            predictions[j:j + prediction_window] = prediction[:, 0]             # Place prediction in predictions arr
+            esn.fit(np.ones(train_length), final_target[j:train_length + j])  # Teacher-force output
+            prediction = esn.predict(np.ones(prediction_window))  # Predict next (future) values
+            predictions[j:j + prediction_window] = prediction[:, 0]  # Place prediction in predictions array
 
         # Calculate mean-squared error
-        act_tot = final_target[train_length:train_length + n_predicted_days]
-        mse = np.square(np.subtract(act_tot, predictions)).mean()
+        prices = final_target[train_length:train_length + n_predicted_days]
+        mse = get_mse(prices, predictions)
         # Mean Squared Error
         if mse < best_mse:
             best_mse, best_training = mse, train_length
             print("Best MSE/training so far: ", best_mse, "/", best_training, "\n")
 
-        iteration_df = training_df.append({'window' : i , 'mse' : mse} , ignore_index=True)
+        iteration_df = training_df.append({'window': i, 'mse': mse}, ignore_index=True)
         training_df = iteration_df
 
     plot.plot_window_optimization(training_df, 'window', 'mse', 'Training window',
-                                  'MSE', 'Window optimization', 'optimal_window.html', parameters.html_auto_show)
+                                  'MSE', 'Window optimization', 'optimal_window.html', parameters.window_html_auto_show)
     return best_training, best_mse
