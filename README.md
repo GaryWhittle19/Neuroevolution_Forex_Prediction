@@ -9,13 +9,27 @@
 5. Install pip in the environment                                                     'conda install pip'
 6. Install pandas, numpy, plotly, and cufflinks in the environment using pip          'pip install numpy pandas plotly cufflinks'
 7. Change directory to the one containing source files                                'cd [path to source code]'
-8. Execute main.py to run program. Edit parameters.py to control program parameters         'python main.py'
+8. Execute main.py to run program. See below for controlling program parameters       'python main.py'
 
 #### Steps 3-8 (video):
-
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZGfAD9ShAr0
 " target="_blank"><img src="http://img.youtube.com/vi/ZGfAD9ShAr0" 
-alt="YOUTUBE TUTORIAL" width="240" height="180" border="10" /></a>
+alt="YOUTUBE CONDA TUTORIAL" width="240" height="180" border="10" /></a>
+
+### Step 9 (optional - if saving .txt is required). 
+To save the output to a .txt file, simply add '> output.txt' to the end of the program execution command. The output will be stored in the source directory. Execute program like so: 'python main.py > output.txt'
+
+This redirects the output to the text file, so none will be visible in Anaconda prompt; one solution to this is running the program using PyCharm, with the correct configuration. The brief video below shows how to do this.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ad0F0RDyxpg
+" target="_blank"><img src="http://img.youtube.com/vi/ad0F0RDyxpg" 
+alt="YOUTUBE PYCHARM TUTORIAL" width="240" height="180" border="10" /></a>
+________________________________________________________________________________________________________________________________________
+
+### How to use:
+Once the above steps are complete, user interaction can take place within the 'parameters.py' file in the source directory. Here, users have access to a variety of important training and testing settings. Outlined below is each of these and their relevance to the application.
+
+
 ________________________________________________________________________________________________________________________________________
 Echo State Network created with PyESN; available at https://github.com/cknd/pyESN/blob/master/license.md
 
