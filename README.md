@@ -16,7 +16,7 @@
 " target="_blank"><img src="http://img.youtube.com/vi/ZGfAD9ShAr0" 
 alt="YOUTUBE CONDA TUTORIAL" width="240" height="180" border="10" /></a>
 
-### Step 9 (optional - if saving .txt is required). 
+#### Step 9 (optional - if saving .txt is required). 
 To save the output to a .txt file, simply add '> output.txt' to the end of the program execution command. The output will be stored in the source directory. Execute program like so: 'python main.py > output.txt'
 
 This redirects the output to the text file, so none will be visible in Anaconda prompt; one solution to this is running the program using PyCharm, with the correct configuration. The brief video below shows how to do this.
@@ -29,7 +29,35 @@ ________________________________________________________________________________
 ### How to use:
 Once the above steps are complete, user interaction can take place within the 'parameters.py' file in the source directory. Here, users have access to a variety of important training and testing settings. Outlined below is each of these and their relevance to the application.
 
-
+* Predictions fitting
+  * prediction_window: The number of days that the network must predict  
+  * n_optimizer_predictions: The number of predictions to base average mean-squared error on when testing training windows
+  * smallest_possible_training_window: Smallest training window to test during window optimization
+  * largest_possible_training_window: Largest training window to test during window optimization
+  * training_window_test_increase: The number to increase by between window tests
+  * n_fitness_predictions: The number of predictions to base average mean-squared error on when getting fitness during neuroevolution
+  * n_test_predictions: More will give better representation of effectiveness during the final testing of standard/evolved Echo State Network
+* Echo State Network (ESN)
+  * n_reservoir: Size of ESN hidden state
+  * spectral_radius: Spectral radius to use during weight initialization in the ESN hidden state
+  * sparsity: Sparsity to use during weight initialization in the ESN hidden state
+  * noise: Noise to use during fitting of ESN to target data
+  * input_scaling: Scale of the input to hidden weights within the ESN
+* Neuroevolution
+  * n_generations: Number of generations to run genetic algorithm for
+  * n_population: Number of members in population 
+  * mutation_rate: Mutation rate by which to mutate Echo State Networks
+  * crossover_rate: Multiply by 100 to give the percentage of next population which will be based on current population's best member
+*
+  * training_html_auto_show: If true display training plotly htmls upon creation
+  * testing_html_auto_show: If true display testing plotly htmls upon creation
+  * ohlc_html_auto_show: If true display OHLC html upon creation
+  * window_html_auto_show: If true display window optimization html upon creation
+  * results_html_auto_show: If true display results html upon creation
+  * x_range_factor: Plot x-range will be (training_window x this value)
+  * max_test_line_width: The maximum line width which
+  * test_line_width_factor: This factor works with mean-squared error to set line width - refer to source code for the equation
+* n_iterations: How many tests to run
 ________________________________________________________________________________________________________________________________________
 Echo State Network created with PyESN; available at https://github.com/cknd/pyESN/blob/master/license.md
 
